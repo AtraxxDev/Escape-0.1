@@ -6,6 +6,7 @@ using UnityEngine;
 public class RandomPW : MonoBehaviour
 {
     [SerializeField] private TMP_Text Text;
+    public GameObject CaptainLogObj;
     private string numerosaleatorios;
 
     // Start is called before the first frame update
@@ -25,5 +26,15 @@ public class RandomPW : MonoBehaviour
     void Update()
     {
         Text.text = "" + numerosaleatorios;
+    }
+
+    public void Activate()
+    {
+       CaptainLogObj.SetActive(true);
+    }
+
+    public void Deactivate()
+    { 
+       CaptainLogObj.SetActive(!true);
     }
 }
