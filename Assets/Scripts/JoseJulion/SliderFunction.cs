@@ -9,6 +9,11 @@ public class SliderFunction : MonoBehaviour
     public Light pointlight3;
     public Light pointlight4;
 
+    private void Start()
+    {
+        
+    }
+
     public void OnValueChanged(float value)
     {   
         if (pointlight != null)
