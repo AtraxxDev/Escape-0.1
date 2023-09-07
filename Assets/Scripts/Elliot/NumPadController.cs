@@ -8,6 +8,7 @@ public class NumPadController : MonoBehaviour
 {
     [SerializeField] private TMP_Text displayText;
     public RandomCodes randomCodesScript;
+    public GameObject object_Animator;
 
     // Este método se llama cuando se presiona un botón del numpad.
     public void OnNumPadButtonPress(string number)
@@ -33,6 +34,15 @@ public class NumPadController : MonoBehaviour
             if (esCorrecto)
             {
                 Debug.Log("Abierto");
+
+                if (object_Animator != null)
+                {
+                    Animator animator = object_Animator.GetComponent<Animator>();
+                    if (animator != null)
+                    {
+                        animator.SetTrigger("Open"); // "Abierto" es el nombre del trigger en el Animator
+                    }
+                }
             }
             else
             {
