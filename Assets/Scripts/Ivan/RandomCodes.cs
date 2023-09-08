@@ -6,7 +6,8 @@ using UnityEngine;
 public class RandomCodes : MonoBehaviour
 {
     [SerializeField] private TMP_Text Text;
-    
+    public GameObject CaptainLogObj;
+
     public string codigoAsignado; // Nuevo campo para el código asignado
 
     // Este método se llama al inicio para asignar un código específico.
@@ -36,4 +37,15 @@ public class RandomCodes : MonoBehaviour
     {
         
     }
+
+    public void Activate()
+    {
+        CaptainLogObj.SetActive(true);
+    }
+
+    public void Deactivate()
+    {
+        CaptainLogObj.SetActive(!true);
+    }
+
 }

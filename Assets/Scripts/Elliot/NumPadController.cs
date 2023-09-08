@@ -7,17 +7,26 @@ using UnityEngine.UI;
 public class NumPadController : MonoBehaviour
 {
     [SerializeField] private TMP_Text displayText;
+   
     public RandomCodes randomCodesScript;
     public GameObject object_Animator;
+    public GameObject object_Light;
+    public AudioSource soundError;
+    public AudioSource soundTrue;
+    public GameObject CanvasUI1;
+    
+  
 
     // Este método se llama cuando se presiona un botón del numpad.
     public void OnNumPadButtonPress(string number)
     {
         displayText.text += number;
+        
 
         if (displayText.text.Length == 4)
         {
             char[] charArray = displayText.text.ToCharArray();
+            
             char[] codigoCorrecto = randomCodesScript.codigoAsignado.ToCharArray(); // Usamos el código asignado
 
             bool esCorrecto = true;
@@ -29,6 +38,7 @@ public class NumPadController : MonoBehaviour
                     esCorrecto = false;
                     break;
                 }
+              
             }
 
             if (esCorrecto)
@@ -41,13 +51,32 @@ public class NumPadController : MonoBehaviour
                     if (animator != null)
                     {
                         animator.SetTrigger("Open"); // "Abierto" es el nombre del trigger en el Animator
+                        CanvasUI1.SetActive(false);
                     }
                 }
+
+               /* if (object_Light != null)
+                {
+                    Light _light = object_Light.GetComponent<Light>();
+                    if (_light != null)
+                    {
+                        _light.enabled = true;
+                        CanvasUI1.SetActive(false);
+                    }
+                }*/
+
+
+                soundTrue.Play(5);
+
+
+
+
             }
             else
             {
                 Debug.Log("Failed");
                 displayText.text = "";
+                soundError.Play(5);
             }
         }
     }
