@@ -6,20 +6,28 @@ using UnityEngine;
 public class RandomCodes : MonoBehaviour
 {
     [SerializeField] private TMP_Text Text;
-    public string numerosaleatorios;
+    
+    public string codigoAsignado; // Nuevo campo para el código asignado
+
+    // Este método se llama al inicio para asignar un código específico.
+    public void AsignarCodigo(string codigo)
+    {
+        codigoAsignado = codigo;
+        Text.text = codigoAsignado;
+    }
 
     // Start is called before the first frame update
     void Start()
     {
 
-        numerosaleatorios += Random.Range(1, 9) + "";
-        numerosaleatorios += Random.Range(1, 9) + "";
-        numerosaleatorios += Random.Range(1, 9) + "";
-        numerosaleatorios += Random.Range(1, 9) + "";
+        codigoAsignado += Random.Range(1, 9) + "";
+        codigoAsignado += Random.Range(1, 9) + "";
+        codigoAsignado += Random.Range(1, 9) + "";
+        codigoAsignado += Random.Range(1, 9) + "";
 
         
 
-        Text.text = "" + numerosaleatorios;
+        Text.text = "" + codigoAsignado;
 
     }
 
