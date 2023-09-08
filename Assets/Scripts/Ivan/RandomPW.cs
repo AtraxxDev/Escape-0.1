@@ -18,7 +18,7 @@ public class RandomPW : MonoBehaviour
         numerosaleatorios += Random.Range(1, 9) + ", ";
         numerosaleatorios += Random.Range(1, 9) + ", ";
 
-        Debug.Log("numerosaleatorios");
+       // Debug.Log(" "+ numerosaleatorios);
 
     }
 

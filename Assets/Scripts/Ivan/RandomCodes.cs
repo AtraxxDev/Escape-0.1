@@ -25,9 +25,9 @@ public class RandomCodes : MonoBehaviour
         codigoAsignado += Random.Range(1, 9) + "";
         codigoAsignado += Random.Range(1, 9) + "";
 
-        
 
-        Text.text = "" + codigoAsignado;
+        AsignarCodigo(codigoAsignado);
+        Debug.Log(" " + codigoAsignado) ;
 
     }
 
