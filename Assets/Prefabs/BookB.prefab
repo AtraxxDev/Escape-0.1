@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 6842496281822093190}
   - component: {fileID: 7591579718560829475}
   - component: {fileID: 5674045980768478441}
-  - component: {fileID: 6058746939416447777}
   - component: {fileID: 5909107108815800624}
   - component: {fileID: 6369379371347730704}
+  - component: {fileID: -8132013365890564583}
   m_Layer: 0
   m_Name: BookB
   m_TagString: Untagged
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 6178585410048853308}
   m_LocalRotation: {x: 0.00000001545431, y: -0.000000015454306, z: -0.7071067, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 6}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -86,19 +86,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &6058746939416447777
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6178585410048853308}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.020000001, y: 0.07021983, z: 0.020000003}
-  m_Center: {x: -0.0000000023283062, y: -0.025109913, z: 0.0000000013969839}
 --- !u!54 &5909107108815800624
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -263,3 +250,16 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!65 &-8132013365890564583
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6178585410048853308}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.07021984, y: 0.099453, z: 0.02}
+  m_Center: {x: -0.01631298, y: -0.0000000018626449, z: 1.159488e-17}
