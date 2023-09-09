@@ -18310,6 +18310,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nivel1Redux
       objectReference: {fileID: 0}
+    - target: {fileID: 4227725327397947948, guid: bbc28d6976170234cb59cf0fa48c07ec, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4227725327716053885, guid: bbc28d6976170234cb59cf0fa48c07ec, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
