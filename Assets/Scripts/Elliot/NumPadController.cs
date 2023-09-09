@@ -15,6 +15,7 @@ public class NumPadController : MonoBehaviour
     public AudioSource soundTrue;
     public GameObject CanvasUI1;
     
+    
   
 
     // Este método se llama cuando se presiona un botón del numpad.
@@ -55,15 +56,14 @@ public class NumPadController : MonoBehaviour
                     }
                 }
 
-               /* if (object_Light != null)
+                if (object_Light != null)
                 {
-                    Light _light = object_Light.GetComponent<Light>();
-                    if (_light != null)
+                    DoorLightController doorlight = object_Light.GetComponent<DoorLightController>();
+                    if (doorlight != null)
                     {
-                        _light.enabled = true;
-                        CanvasUI1.SetActive(false);
+                        doorlight.UnlockedDoor();
                     }
-                }*/
+                }
 
 
                 soundTrue.Play(5);
