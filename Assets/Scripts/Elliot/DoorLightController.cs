@@ -5,16 +5,17 @@ using UnityEngine;
 public class DoorLightController : MonoBehaviour
 {
     public bool LockDoor;
-    public float timeChangeFade = 2;
+    public int _numberSceneLoad;
     public GameObject LightGreen;
     public GameObject LightRed;
+    public SceneTransitionManager _sceneTransition;
    // public Animator _anim;
     public AudioSource lockSound;
     public AudioSource UnlockSound;
     // Start is called before the first frame update
     void Start()
     {
-        LockDoor = true;
+        
        
     }
 
@@ -42,17 +43,10 @@ public class DoorLightController : MonoBehaviour
         if (LockDoor == false)
         {
             UnlockSound.Play();
-           // _anim.SetTrigger("FadeIn"); // "FadeIn" es el nombre del trigger en el Animator
-           // StartCoroutine(playFadeAnim());           
+            _sceneTransition.GoToSceneAsync(_numberSceneLoad);
         }
     }
 
     
-    IEnumerator playFadeAnim() 
-    {
-        UnlockSound.Play();
-       // _anim.SetTrigger("FadeIn"); // "FadeIn" es el nombre del trigger en el Animator
-        yield return new WaitForSeconds (timeChangeFade);
-      //  _anim.SetTrigger("FadeOut"); // "FadeOut" es el nombre del trigger en el Animator
-    }
+
 }

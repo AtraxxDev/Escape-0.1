@@ -1,19 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class WeaponPart_Controller : MonoBehaviour
+public class PartsActive : MonoBehaviour
 {
     public Inventory _inventory;
-
-    // Start is called before the first frame update
     public GameObject Part1;
     public GameObject Part2;
     public GameObject Part3;
     public GameObject Part4;
-    public AudioSource ObtainedSound;
-
     private void Awake()
     {
         // Busca el objeto con la etiqueta "InventoryObject" en la escena
@@ -29,37 +24,52 @@ public class WeaponPart_Controller : MonoBehaviour
         {
             Debug.LogError("No se encontró ningún objeto con la etiqueta 'InventoryObject' en la escena.");
         }
+
+      
+
     }
 
-    public void AddInventoryPart()
+    private void Start()
     {
-        _inventory.Key1 = true;
-        ObtainedSound.Play();
-        Part1.SetActive(false);
+        if (_inventory.Key1 == true)
+        {
+            Part1.SetActive(true);
+        }
+        else
+        {
+            Part1.SetActive(false);
+
+        }
+
+        if (_inventory.Key2 == true)
+        {
+            Part2.SetActive(true);
+        }
+        else
+        {
+            Part2.SetActive(false);
+
+        }
+
+        if (_inventory.Key3 == true)
+        {
+            Part3.SetActive(true);
+        }
+        else
+        {
+            Part3.SetActive(false);
+
+        }
+
+        if (_inventory.Key4 == true)
+        {
+            Part4.SetActive(true);
+        }
+        else
+        {
+            Part4.SetActive(false);
+
+        }
+
     }
-
-    public void AddInventoryPart2()
-    {
-        _inventory.Key2 = true;
-        ObtainedSound.Play();
-        Part2.SetActive(false);
-
-    }
-
-    public void AddInventoryPart3()
-    {
-        _inventory.Key3 = true;
-        ObtainedSound.Play();
-        Part3.SetActive(false);
-
-    }
-
-    public void AddInventoryPart4()
-    {
-        _inventory.Key4 = true;
-        ObtainedSound.Play();
-        Part4.SetActive(false);
-
-    }
-
 }

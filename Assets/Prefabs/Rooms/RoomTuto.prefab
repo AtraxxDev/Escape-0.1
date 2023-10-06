@@ -2742,14 +2742,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cd78fe094c1212468f7e5c5796f099b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _inventory: {fileID: 0}
   Part1: {fileID: 7893090985287882668}
-  Part1_Contention: {fileID: 0}
   Part2: {fileID: 0}
-  Part2_Contention: {fileID: 0}
   Part3: {fileID: 0}
-  Part3_Contention: {fileID: 0}
   Part4: {fileID: 0}
-  Part4_Contention: {fileID: 0}
   ObtainedSound: {fileID: 7010008672134865730}
 --- !u!1 &7010008673415098790
 GameObject:
@@ -23978,9 +23975,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LockDoor: 0
-  timeChangeFade: 2
+  _numberSceneLoad: 0
   LightGreen: {fileID: 7010008672063516864}
   LightRed: {fileID: 7010008672983424761}
+  _sceneTransition: {fileID: 0}
   lockSound: {fileID: 7010008672457089575}
   UnlockSound: {fileID: 7010008672950126966}
 --- !u!1001 &7010008673478606935
