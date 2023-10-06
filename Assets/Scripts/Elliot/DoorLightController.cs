@@ -15,7 +15,7 @@ public class DoorLightController : MonoBehaviour
     void Start()
     {
         LockDoor = true;
-        LightRed.SetActive(true);
+       
     }
 
     // Update is called once per frame
