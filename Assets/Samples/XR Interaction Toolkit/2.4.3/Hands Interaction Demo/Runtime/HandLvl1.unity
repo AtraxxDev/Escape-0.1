@@ -889,6 +889,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1b83d546d0f3d9243b8d991b97ba8666, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1523070622652911614, guid: 1b83d546d0f3d9243b8d991b97ba8666, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -2342,7 +2346,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c8be5df128eb4b54fb131f44c58a4c78, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c8be5df128eb4b54fb131f44c58a4c78, type: 3}
       propertyPath: m_TagString
@@ -5274,6 +5278,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BookG
       objectReference: {fileID: 0}
+    - target: {fileID: 2281978957551554233, guid: a16c9acf847176e4fa6784ab3235bab4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a16c9acf847176e4fa6784ab3235bab4, type: 3}
 --- !u!4 &641366799 stripped
@@ -5791,6 +5799,10 @@ PrefabInstance:
     - target: {fileID: 2832466699595665924, guid: c9d573782a9de684db69eeea1d8d0649, type: 3}
       propertyPath: m_Name
       value: Saefty Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 2832466699595665924, guid: c9d573782a9de684db69eeea1d8d0649, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3171978725511497918, guid: c9d573782a9de684db69eeea1d8d0649, type: 3}
       propertyPath: m_RootOrder
@@ -7205,6 +7217,10 @@ PrefabInstance:
     - target: {fileID: 2281978957551554233, guid: a16c9acf847176e4fa6784ab3235bab4, type: 3}
       propertyPath: m_Name
       value: BookG (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2281978957551554233, guid: a16c9acf847176e4fa6784ab3235bab4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a16c9acf847176e4fa6784ab3235bab4, type: 3}
@@ -11817,6 +11833,10 @@ PrefabInstance:
     - target: {fileID: 935347663308292763, guid: ff5002c56a2d0aa40a3a50aa14badc05, type: 3}
       propertyPath: m_Name
       value: Lights Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 935347663308292763, guid: ff5002c56a2d0aa40a3a50aa14badc05, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2515648035661344267, guid: ff5002c56a2d0aa40a3a50aa14badc05, type: 3}
       propertyPath: m_SizeDelta.x
@@ -21923,6 +21943,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Captain Log
       objectReference: {fileID: 0}
+    - target: {fileID: 2281978957551554233, guid: a16c9acf847176e4fa6784ab3235bab4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4307667350920730751, guid: a16c9acf847176e4fa6784ab3235bab4, type: 3}
       propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -23601,6 +23625,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: XR Interaction Hands Setup
       objectReference: {fileID: 0}
+    - target: {fileID: 865075385244835223, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4078678170581458340, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -24402,6 +24430,10 @@ PrefabInstance:
     - target: {fileID: 4657714991567418423, guid: 8d0926fbf660f8b43ad9d7a66053b887, type: 3}
       propertyPath: m_Name
       value: 'TV Y LAP '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4657714991567418423, guid: 8d0926fbf660f8b43ad9d7a66053b887, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5697034421109395945, guid: 8d0926fbf660f8b43ad9d7a66053b887, type: 3}
       propertyPath: m_RootOrder
