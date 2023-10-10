@@ -7,11 +7,12 @@ public class FadeScreen : MonoBehaviour
     public bool fadeOnStart = true;
     public float fadeDuration = 3;
     public Color fadeColor;
-    private Renderer rend;
+    public Renderer rend;
+    public OnAndOffObject on_off;
     // Start is called before the first frame update
     void Start()
     {
-        rend = GetComponent<Renderer>();
+       
         if (fadeOnStart)
             FadeIn();
     }
@@ -44,6 +45,9 @@ public class FadeScreen : MonoBehaviour
             timer += Time.deltaTime;
             yield return null;
         }
+        Debug.Log("Me voy a apagar");
+        on_off.ObjectOff();
+        Debug.Log("Me apague");
         Color newColor2 = fadeColor;
         newColor2.a = alphaOut;
         rend.material.SetColor("_Color", newColor2);
