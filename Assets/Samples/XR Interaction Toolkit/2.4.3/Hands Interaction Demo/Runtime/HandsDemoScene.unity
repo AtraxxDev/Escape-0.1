@@ -7576,7 +7576,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54ce4268a4182384da360e6e2654d3a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ObjectsToReset: []
+  m_ObjectsToReset:
+  - {fileID: 3154726581514219159}
+  - {fileID: 3154726582704566507}
+  - {fileID: 3154726583302699059}
   m_CheckDuration: 2
 --- !u!1 &1264511920
 GameObject:
