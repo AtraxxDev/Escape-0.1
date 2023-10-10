@@ -7,11 +7,6 @@ public class SceneTransitionManager : MonoBehaviour
 {
     public FadeScreen fadeScreen;
 
-    private void Start()
-    {
-
-    }
-
     public void GoToSceneAsync(int sceneIndex)
     {
         StartCoroutine(GoToSceneAsyncRoutine(sceneIndex));
@@ -30,13 +25,9 @@ public class SceneTransitionManager : MonoBehaviour
         float timer = 0;
         while(timer <= fadeScreen.fadeDuration &&  !operation.isDone)
                 {
-            Debug.Log(timer);
-
             timer += Time.deltaTime;
             yield return null;
         }
-
-
         operation.allowSceneActivation = true;
     }
 }
