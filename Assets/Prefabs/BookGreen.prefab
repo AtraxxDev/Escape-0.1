@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -6833238203750548119}
   - component: {fileID: 7720150582244742084}
   - component: {fileID: 5409130007332549592}
+  - component: {fileID: -2476054211583732852}
   m_Layer: 0
   m_Name: BookGreen
   m_TagString: Untagged
@@ -263,3 +264,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.07021982, y: 0.099453, z: 0.02}
   m_Center: {x: -0.016313137, y: -0.0000000018626449, z: 1.1594993e-17}
+--- !u!114 &-2476054211583732852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3492922380389863147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a1302d0d134fa8a2a5b3bf4aec3c20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PermittedDisplacementAxes: 7
+  m_ConstrainedAxisDisplacementMode: 1
+  m_TwoHandedRotationMode: 1
+  m_AllowTwoHandedScaling: 1
+  m_ThresholdMoveRatioForScale: 0.1
+  m_ClampScaling: 1
+  m_MinimumScaleRatio: 0.25
+  m_MaximumScaleRatio: 2
+  m_ScaleMultiplier: 0.25

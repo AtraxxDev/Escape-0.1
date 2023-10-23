@@ -3291,7 +3291,6 @@ TextureImporter:
     nameFileIdTable:
       TablaJijija-removebg 2_43: 1509956398
       TablaJijija-removebg 2_138: 2017935758
-      TablaJijija-removebg 2_61: -1504253955
       TablaJijija-removebg 2_85: -1857777009
       TablaJijija-removebg 2_40: 1764938896
       TablaJijija-removebg 2_20: -1121805565
@@ -3302,6 +3301,7 @@ TextureImporter:
       TablaJijija-removebg 2_50: 1074323412
       TablaJijija-removebg 2_119: 347309477
       TablaJijija-removebg 2_120: 1064113541
+      TablaJijija-removebg 2_83: 2072829647
       TablaJijija-removebg 2_53: -1420461894
       TablaJijija-removebg 2_41: 2030987712
       TablaJijija-removebg 2_88: -1101926862
@@ -3320,22 +3320,22 @@ TextureImporter:
       TablaJijija-removebg 2_15: -1358829090
       TablaJijija-removebg 2_18: -607059683
       TablaJijija-removebg 2_142: -1579113577
+      TablaJijija-removebg 2_35: 1923073671
       TablaJijija-removebg 2_14: -896163357
       TablaJijija-removebg 2_28: 551706648
       TablaJijija-removebg 2_103: 98837783
-      TablaJijija-removebg 2_22: 1447512874
       TablaJijija-removebg 2_80: 1580213938
       TablaJijija-removebg 2_79: 2034093096
-      TablaJijija-removebg 2_51: -171944346
+      TablaJijija-removebg 2_22: 1447512874
       TablaJijija-removebg 2_36: -143061206
       TablaJijija-removebg 2_116: -1867185630
-      TablaJijija-removebg 2_35: 1923073671
+      TablaJijija-removebg 2_51: -171944346
       TablaJijija-removebg 2_145: 214470128
+      TablaJijija-removebg 2_127: 1921415597
       TablaJijija-removebg 2_34: -1960375168
       TablaJijija-removebg 2_23: 1627624996
       TablaJijija-removebg 2_118: -1860027993
       TablaJijija-removebg 2_128: -1846146924
-      TablaJijija-removebg 2_127: 1921415597
       TablaJijija-removebg 2_100: 1935921061
       TablaJijija-removebg 2_96: 1720557091
       TablaJijija-removebg 2_131: 454326961
@@ -3437,8 +3437,8 @@ TextureImporter:
       TablaJijija-removebg 2_126: 505250424
       TablaJijija-removebg 2_67: 262217241
       TablaJijija-removebg 2_139: 128559608
-      TablaJijija-removebg 2_83: 2072829647
       TablaJijija-removebg 2_102: 794358709
+      TablaJijija-removebg 2_61: -1504253955
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
