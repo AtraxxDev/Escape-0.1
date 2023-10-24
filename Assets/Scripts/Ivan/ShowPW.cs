@@ -6,7 +6,7 @@ using UnityEngine;
 public class ShowPW : MonoBehaviour
 {
     //[SerializeField] private TMP_Text Text;
-    public GameObject CaptainLogObj;
+    //public GameObject CaptainLogObj;
 
     public string codigoAsignado; // Nuevo campo para el código asignado
 

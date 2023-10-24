@@ -3,42 +3,42 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class NumPadController : MonoBehaviour
+public class NumPadFijo : MonoBehaviour
 {
     [SerializeField] private TMP_Text displayText;
-   
-    public RandomCodes randomCodesScript;
+
+    public ShowPW randomCodesScript;
     public GameObject object_Animator;
     public GameObject object_Light;
     public AudioSource soundError;
     public AudioSource soundTrue;
     public GameObject CanvasUI1;
-    
-    
-  
+
+
+
 
     // Este método se llama cuando se presiona un botón del numpad.
     public void OnNumPadButtonPress(string number)
     {
         displayText.text += number;
-        
 
-        if (displayText.text.Length == 4)
+
+        if (displayText.text.Length == 3)
         {
             char[] charArray = displayText.text.ToCharArray();
-            
+
             char[] codigoCorrecto = randomCodesScript.codigoAsignado.ToCharArray(); // Usamos el código asignado
 
             bool esCorrecto = true;
 
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 3; i++)
             {
                 if (charArray[i] != codigoCorrecto[i])
                 {
                     esCorrecto = false;
                     break;
                 }
-              
+
             }
 
             if (esCorrecto)
@@ -80,10 +80,10 @@ public class NumPadController : MonoBehaviour
         }
     }
 
-    
+
     public void OnClearButtonPress()
     {
-        
+
         displayText.text = "";
     }
 }
