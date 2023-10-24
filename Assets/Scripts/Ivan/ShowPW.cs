@@ -19,10 +19,10 @@ public class ShowPW : MonoBehaviour
     void Start()
     {
 
-        codigoAsignado += Random.Range(1, 9) + "";
-        codigoAsignado += Random.Range(1, 9) + "";
-        codigoAsignado += Random.Range(1, 9) + "";
-        codigoAsignado += Random.Range(1, 9) + "";
+        codigoAsignado += 5 + "";
+        codigoAsignado += 1 + "";
+        codigoAsignado += 8 + "";
+        //codigoAsignado += Random.Range(1, 9) + "";
 
 
         AsignarCodigo(codigoAsignado);
