@@ -12871,13 +12871,17 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 4550687454903720593, guid: 1f0d82dd162229c4d887e2a080b6b03e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.408
+      objectReference: {fileID: 0}
     - target: {fileID: 4550687454903720595, guid: 1f0d82dd162229c4d887e2a080b6b03e, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4550687454903720595, guid: 1f0d82dd162229c4d887e2a080b6b03e, type: 3}
       propertyPath: m_Intensity
-      value: 0.1
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4550687455268125463, guid: 1f0d82dd162229c4d887e2a080b6b03e, type: 3}
       propertyPath: m_Enabled

@@ -16,7 +16,7 @@ public class DoorLightController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Load();
        
     }
 
@@ -26,11 +26,31 @@ public class DoorLightController : MonoBehaviour
        
     }
 
+    void Load()
+    {
+        
+        string currentSceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+
+        
+        string clearedKey = currentSceneName + "_cleared";
+
+        if (PlayerPrefs.GetInt(clearedKey, 0) == 1)
+        {
+            UnlockedDoor();
+        }
+    }
+
     public void UnlockedDoor()
     {
         LockDoor = false;
         LightGreen.SetActive(true);
         LightRed.SetActive(false);
+        
+        string currentSceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        string clearedKey = currentSceneName + "_cleared";
+
+        PlayerPrefs.SetInt(clearedKey, 1);
+        PlayerPrefs.Save();
     }
 
    public void CheckDoor()
@@ -46,7 +66,7 @@ public class DoorLightController : MonoBehaviour
             Debug.Log("Me voy a Prender");
             on_off.ObjectOn();
             Debug.Log("Me Prendi");
-            UnlockSound.Play();
+            UnlockSound.Play();           
             _sceneTransition.GoToSceneAsync(_numberSceneLoad);
         }
     }
