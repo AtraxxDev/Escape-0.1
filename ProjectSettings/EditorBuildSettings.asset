@@ -11,6 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HandLvl2.unity
     guid: 1ef41cdf1364c5a47b92e9db7a0d1f69
+  - enabled: 1
+    path: Assets/Scenes/LV2-CONCEPTO.unity
+    guid: e134ceea969e98641bf9c20de5c7d4ab
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 6f43243bc5ecf884aaccf118a59f7503, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 9e83c514ea06670419098d64052eed5d, type: 2}
