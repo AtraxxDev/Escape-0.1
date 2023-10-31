@@ -2546,7 +2546,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LockDoor: 0
-  _numberSceneLoad: 0
+  _numberSceneLoad: 2
   LightGreen: {fileID: 1831564990}
   LightRed: {fileID: 1498547060}
   _sceneTransition: {fileID: 0}
