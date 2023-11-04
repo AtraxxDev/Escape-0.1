@@ -16,8 +16,7 @@ public class DoorLightController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       // LockDoor = true;
-       // Load();
+        Load();
        
     }
 
@@ -37,7 +36,6 @@ public class DoorLightController : MonoBehaviour
 
         if (PlayerPrefs.GetInt(clearedKey, 0) == 1)
         {
-            
             UnlockedDoor();
         }
     }
@@ -48,12 +46,11 @@ public class DoorLightController : MonoBehaviour
         LightGreen.SetActive(true);
         LightRed.SetActive(false);
         
-       /* string currentSceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        string currentSceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
         string clearedKey = currentSceneName + "_cleared";
 
         PlayerPrefs.SetInt(clearedKey, 1);
         PlayerPrefs.Save();
-        Debug.Log("Me guarde");*/
     }
 
    public void CheckDoor()
