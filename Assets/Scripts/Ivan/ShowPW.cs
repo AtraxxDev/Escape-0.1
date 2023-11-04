@@ -9,6 +9,9 @@ public class ShowPW : MonoBehaviour
     public GameObject CaptainLogObj;
 
     public string codigoAsignado; // Nuevo campo para el código asignado
+    public int codigo1=5;
+    public int codigo2=1;
+    public int codigo3=8;
 
     // Este método se llama al inicio para asignar un código específico.
     public void AsignarCodigo(string codigo)
@@ -19,9 +22,9 @@ public class ShowPW : MonoBehaviour
     void Start()
     {
 
-        codigoAsignado += 5 + "";
-        codigoAsignado += 1 + "";
-        codigoAsignado += 8 + "";
+        codigoAsignado += codigo1 + "";
+        codigoAsignado += codigo2 + "";
+        codigoAsignado += codigo3 + "";
 
     }
 
