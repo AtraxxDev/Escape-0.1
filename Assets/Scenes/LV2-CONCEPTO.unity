@@ -9162,6 +9162,30 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4345550663567199962, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345550663567199962, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345550663567199962, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1148375050}
+    - target: {fileID: 4345550663567199962, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnNumPadButtonPress
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345550663567199962, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NumPadFijo, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345550663567199962, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4345550663709520657, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -9178,6 +9202,54 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4345550663709520666, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345550663709520666, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345550663709520666, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1148375050}
+    - target: {fileID: 4345550663709520666, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnNumPadButtonPress
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345550663709520666, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NumPadFijo, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345550663709520666, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345550664035648455, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345550664035648455, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345550664035648455, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1148375050}
+    - target: {fileID: 4345550664035648455, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnNumPadButtonPress
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345550664035648455, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NumPadFijo, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345550664035648455, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 4345550664035648460, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -9194,6 +9266,30 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4345550664103718208, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345550664103718208, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345550664103718208, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1148375050}
+    - target: {fileID: 4345550664103718208, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnNumPadButtonPress
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345550664103718208, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NumPadFijo, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345550664103718208, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 4345550664103718219, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -9209,6 +9305,30 @@ PrefabInstance:
     - target: {fileID: 4345550664103718219, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345550664229553093, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345550664229553093, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345550664229553093, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1148375050}
+    - target: {fileID: 4345550664229553093, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnNumPadButtonPress
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345550664229553093, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NumPadFijo, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345550664229553093, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4345550664229553102, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
       propertyPath: m_AnchorMax.y
@@ -9242,6 +9362,58 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4345550664282966188, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345550664282966188, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345550664282966188, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1148375050}
+    - target: {fileID: 4345550664282966188, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnNumPadButtonPress
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345550664282966188, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NumPadFijo, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345550664282966188, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345550664697593110, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345550664697593110, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345550664697593110, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1148375050}
+    - target: {fileID: 4345550664697593110, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnNumPadButtonPress
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345550664697593110, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NumPadFijo, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345550664697593110, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345550664697593110, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4345550664697593117, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -9257,6 +9429,22 @@ PrefabInstance:
     - target: {fileID: 4345550664697593117, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345550664991647170, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345550664991647170, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1148375050}
+    - target: {fileID: 4345550664991647170, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnClearButtonPress
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345550664991647170, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NumPadFijo, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4345550664991647177, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
       propertyPath: m_AnchorMax.y
@@ -9290,6 +9478,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4345550665101923773, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1148375050}
+    - target: {fileID: 4345550665101923773, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnNumPadButtonPress
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345550665101923773, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NumPadFijo, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 4345550665143916102, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -9305,6 +9505,18 @@ PrefabInstance:
     - target: {fileID: 4345550665143916102, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345550665143916109, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1148375050}
+    - target: {fileID: 4345550665143916109, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnNumPadButtonPress
+      objectReference: {fileID: 0}
+    - target: {fileID: 4345550665143916109, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: NumPadFijo, Assembly-CSharp
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 115574708324533328, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
