@@ -6,9 +6,12 @@ using UnityEngine.SceneManagement;
 public class SceneTransitionManager : MonoBehaviour
 {
     public FadeScreen fadeScreen;
+    public OnAndOffObject on_off;
 
     public void GoToSceneAsync(int sceneIndex)
     {
+        on_off.ObjectOn();
+
         StartCoroutine(GoToSceneAsyncRoutine(sceneIndex));
     }
 
