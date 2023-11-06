@@ -738,13 +738,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LockDoor: 0
-  _numberSceneLoad: 0
+  _numberSceneLoad: 4
   LightGreen: {fileID: 1365664400}
   LightRed: {fileID: 707988649}
-  _sceneTransition: {fileID: 0}
+  _sceneTransition: {fileID: 806919382}
   lockSound: {fileID: 1234235511}
   UnlockSound: {fileID: 608115494}
-  on_off: {fileID: 0}
+  on_off: {fileID: 806919381}
 --- !u!1 &89318626
 GameObject:
   m_ObjectHideFlags: 0
@@ -12625,6 +12625,10 @@ PrefabInstance:
       value: TransitionManager
       objectReference: {fileID: 0}
     - target: {fileID: 710126370544927463, guid: ef613c9d1cbbcd54a844ab90fb7194b6, type: 3}
+      propertyPath: on_off
+      value: 
+      objectReference: {fileID: 806919381}
+    - target: {fileID: 710126370544927463, guid: ef613c9d1cbbcd54a844ab90fb7194b6, type: 3}
       propertyPath: fadeScreen
       value: 
       objectReference: {fileID: 1948693208}
@@ -12648,6 +12652,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _object: {fileID: 1248530935}
+--- !u!114 &806919382 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 710126370544927463, guid: ef613c9d1cbbcd54a844ab90fb7194b6, type: 3}
+  m_PrefabInstance: {fileID: 806919379}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 806919380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7483fb399c0667f459e7c63e2ceadf1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &809110995
 GameObject:
   m_ObjectHideFlags: 0

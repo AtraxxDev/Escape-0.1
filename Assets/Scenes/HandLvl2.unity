@@ -2408,6 +2408,10 @@ PrefabInstance:
       value: TransitionManager
       objectReference: {fileID: 0}
     - target: {fileID: 710126370544927463, guid: ef613c9d1cbbcd54a844ab90fb7194b6, type: 3}
+      propertyPath: on_off
+      value: 
+      objectReference: {fileID: 401651734}
+    - target: {fileID: 710126370544927463, guid: ef613c9d1cbbcd54a844ab90fb7194b6, type: 3}
       propertyPath: fadeScreen
       value: 
       objectReference: {fileID: 1948693208}
@@ -2546,10 +2550,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LockDoor: 0
-  _numberSceneLoad: 2
+  _numberSceneLoad: 3
   LightGreen: {fileID: 1831564990}
   LightRed: {fileID: 1498547060}
-  _sceneTransition: {fileID: 0}
+  _sceneTransition: {fileID: 401651732}
   lockSound: {fileID: 1234235511}
   UnlockSound: {fileID: 608115494}
   on_off: {fileID: 401651734}
@@ -5669,10 +5673,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LockDoor: 0
-  _numberSceneLoad: 0
+  _numberSceneLoad: 4
   LightGreen: {fileID: 1559118640}
   LightRed: {fileID: 455330660}
-  _sceneTransition: {fileID: 0}
+  _sceneTransition: {fileID: 401651732}
   lockSound: {fileID: 1234235511}
   UnlockSound: {fileID: 608115494}
   on_off: {fileID: 401651734}

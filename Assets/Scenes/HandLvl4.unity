@@ -459,7 +459,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &25592702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -601,7 +601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LockDoor: 0
-  _numberSceneLoad: 0
+  _numberSceneLoad: 1
   LightGreen: {fileID: 1365664400}
   LightRed: {fileID: 707988649}
   _sceneTransition: {fileID: 401651732}
@@ -1740,6 +1740,10 @@ PrefabInstance:
       value: TransitionManager
       objectReference: {fileID: 0}
     - target: {fileID: 710126370544927463, guid: ef613c9d1cbbcd54a844ab90fb7194b6, type: 3}
+      propertyPath: on_off
+      value: 
+      objectReference: {fileID: 401651734}
+    - target: {fileID: 710126370544927463, guid: ef613c9d1cbbcd54a844ab90fb7194b6, type: 3}
       propertyPath: fadeScreen
       value: 
       objectReference: {fileID: 1948693208}
@@ -1883,10 +1887,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LockDoor: 0
-  _numberSceneLoad: 0
+  _numberSceneLoad: 2
   LightGreen: {fileID: 1831564990}
   LightRed: {fileID: 1498547060}
-  _sceneTransition: {fileID: 0}
+  _sceneTransition: {fileID: 401651732}
   lockSound: {fileID: 1234235511}
   UnlockSound: {fileID: 608115494}
   on_off: {fileID: 401651734}
@@ -5040,7 +5044,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &935989440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5055,7 +5059,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _inventory: {fileID: 0}
   Part1: {fileID: 0}
-  Part2: {fileID: 0}
+  Part2: {fileID: 306690222}
   Part3: {fileID: 0}
   Part4: {fileID: 0}
 --- !u!4 &935989441
