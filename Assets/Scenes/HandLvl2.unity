@@ -942,6 +942,7 @@ MonoBehaviour:
   lockSound: {fileID: 1234235511}
   UnlockSound: {fileID: 608115494}
   on_off: {fileID: 401651734}
+  otherDoor: {fileID: 0}
 --- !u!1001 &95740033
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2549,7 +2550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3a7b7ac66281b246aaef18e5a9de745, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LockDoor: 0
+  LockDoor: 1
   _numberSceneLoad: 3
   LightGreen: {fileID: 1831564990}
   LightRed: {fileID: 1498547060}
@@ -2557,6 +2558,7 @@ MonoBehaviour:
   lockSound: {fileID: 1234235511}
   UnlockSound: {fileID: 608115494}
   on_off: {fileID: 401651734}
+  otherDoor: {fileID: 0}
 --- !u!1001 &409739735
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5680,6 +5682,7 @@ MonoBehaviour:
   lockSound: {fileID: 1234235511}
   UnlockSound: {fileID: 608115494}
   on_off: {fileID: 401651734}
+  otherDoor: {fileID: 0}
 --- !u!1001 &899390980
 PrefabInstance:
   m_ObjectHideFlags: 0
