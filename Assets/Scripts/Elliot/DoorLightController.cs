@@ -7,12 +7,16 @@ public class DoorLightController : MonoBehaviour
     public bool LockDoor;
     public int _numberSceneLoad;
     public GameObject LightGreen;
+
     public GameObject LightRed;
+
     public SceneTransitionManager _sceneTransition;
    // public Animator _anim;
     public AudioSource lockSound;
     public AudioSource UnlockSound;
     public OnAndOffObject on_off;
+
+    public DoorLightController otherDoor;
     // Start is called before the first frame update
     void Start()
     {
@@ -45,9 +49,13 @@ public class DoorLightController : MonoBehaviour
         LockDoor = false;
         LightGreen.SetActive(true);
         LightRed.SetActive(false);
-        
+
+
+
         string currentSceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
         string clearedKey = currentSceneName + "_cleared";
+
+        if(otherDoor != null) { otherDoor.UnlockedDoor(); }
 
         PlayerPrefs.SetInt(clearedKey, 1);
         PlayerPrefs.Save();
