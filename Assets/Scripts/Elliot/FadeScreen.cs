@@ -19,21 +19,30 @@ public class FadeScreen : MonoBehaviour
 
     public void FadeIn()
     {
-        Fade(1, 0);
+        StartCoroutine(FadeRoutine(1, 0, () =>
+        {
+            Debug.Log("Me voy a apagar");
+            on_off.ObjectOff();
+            Debug.Log("Me apague");
+            // Agrega el código que deseas ejecutar después de la transición de fade aquí
+        }));
     }
 
     public void FadeOut()
     {
-        Fade(0, 1);
+        StartCoroutine(FadeRoutine(0, 1, () =>
+        {
+            // Agrega el código que deseas ejecutar después de la transición de fade aquí
+        }));
 
     }
 
-    public void Fade(float alphaIn, float alphaOut)
+    public void Fade(float alphaIn, float alphaOut, System.Action callback)
     {
-         StartCoroutine(FadeRoutine(alphaIn, alphaOut));
+        StartCoroutine(FadeRoutine(alphaIn, alphaOut, callback));
     }
 
-    public IEnumerator FadeRoutine(float alphaIn, float alphaOut)
+    public IEnumerator FadeRoutine(float alphaIn, float alphaOut, System.Action callback)
     {
         float timer = 0;
         while (timer <= fadeDuration) 
@@ -45,11 +54,10 @@ public class FadeScreen : MonoBehaviour
             timer += Time.deltaTime;
             yield return null;
         }
-        Debug.Log("Me voy a apagar");
-        on_off.ObjectOff();
-        Debug.Log("Me apague");
+
         Color newColor2 = fadeColor;
         newColor2.a = alphaOut;
         rend.material.SetColor("_Color", newColor2);
+        callback?.Invoke(); // Invoca la función de devolución de llamada si no es nula
     }
 }
