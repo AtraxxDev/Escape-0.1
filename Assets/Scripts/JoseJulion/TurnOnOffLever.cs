@@ -4,14 +4,16 @@ using UnityEngine;
 public class TurnOnOffLever: MonoBehaviour
 {
     public List<Light> lightList;
-    private bool Light1;
-    private bool Light2;
-    private bool Light3;
-    private bool Light4;
+    private bool Light1=false;
+    private bool Light2=false;
+    private bool Light3=false;
+    private bool Light4 = false;
     private bool Activate1=true;
     private bool Activate2=true;
     private bool Activate3 = true;
     private bool Activate4 = true;
+    [SerializeField] private AudioSource TurnOnLever;
+    [SerializeField] private AudioSource TurnOffLever;
 
     /* public void Activation()
      {
@@ -43,6 +45,7 @@ public class TurnOnOffLever: MonoBehaviour
             Light1 = true;
             lightList[1].enabled = true;
             Light2 = true;
+            TurnOnLever.Play(5);
         }
         else
         {
@@ -51,6 +54,7 @@ public class TurnOnOffLever: MonoBehaviour
             Light1 = false;
             lightList[1].enabled = false;
             Light2 = false;
+            TurnOffLever.Play(5);
         }
      
     }
@@ -64,6 +68,7 @@ public class TurnOnOffLever: MonoBehaviour
             Light3 = true;
             lightList[1].enabled = false;
             Light2 = false;
+            TurnOnLever.Play(5);
         }
         else
         {
@@ -72,6 +77,7 @@ public class TurnOnOffLever: MonoBehaviour
             Light3 = false;
             lightList[1].enabled = true;
             Light2 = true;
+            TurnOffLever.Play(5);
         }
     }
 
@@ -84,6 +90,7 @@ public class TurnOnOffLever: MonoBehaviour
             Light4 = true;
             lightList[2].enabled = false;
             Light3 = false;
+            TurnOnLever.Play(5);
         }
         else
         {
@@ -92,6 +99,7 @@ public class TurnOnOffLever: MonoBehaviour
             Light4 = false;
             lightList[2].enabled = true;
             Light3 = true;
+            TurnOffLever.Play(5);
         }
       
     }
@@ -105,6 +113,7 @@ public class TurnOnOffLever: MonoBehaviour
             Light3 = true;
             lightList[0].enabled = false;
             Light1 = false;
+            TurnOnLever.Play(5);
         }
         else
         {
@@ -113,6 +122,7 @@ public class TurnOnOffLever: MonoBehaviour
             Light3 = false;
             lightList[0].enabled = true;
             Light1 = true;
+            TurnOffLever.Play(5);
         }
        
 

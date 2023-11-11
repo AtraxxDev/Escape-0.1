@@ -5,15 +5,18 @@ using UnityEngine.Events;
 
 public class CableStorage : MonoBehaviour
 {
-    public CableStorage OtherHand;
-    public UnityEvent OnActivated;
-    public bool redCable = false;
-    public bool blueCable = false;
-    public bool greenCable = false;
-    public bool pinkCable = false;
-    public bool purpleCable = false;
-    public bool InteractWith = false;
+   // public CableStorage OtherHand;
+   // public UnityEvent OnActivated;
+    private bool redCable = false;
+    private bool blueCable = false;
+    private bool greenCable = false;
+    private bool pinkCable = false;
+    private bool purpleCable = false;
+    private bool InteractWith = false;
+    [SerializeField] private AudioSource soundTrue;
+    [SerializeField] private AudioSource soundError;
 
+    /*
     public void SetActivation(bool value)
     {
         if ((redCable = true) && (blueCable = true) && (greenCable = true) && (pinkCable = true) && (purpleCable = true))
@@ -21,8 +24,73 @@ public class CableStorage : MonoBehaviour
             InteractWith = value;
             OnActivated.Invoke();
         }
+    }*/
+
+    private void Update()
+    {
+        if (redCable == true && blueCable == true && greenCable == true && pinkCable == true && purpleCable == true)
+        {
+            InteractWith = true;
+        }
     }
 
+    public void CanInteract()
+    {
+        if(InteractWith==false)
+        {
+            //Aqui pondria como animación fallida y un sonido de que fallo
+            soundError.Play(5);
+        }
+        else
+        {
+            soundTrue.Play(5);
+            //Aqui pondria que se activa una de las cosas para abrir la caja
+        }
+        
+    }
+
+    public void ActivateRed()
+    {
+        redCable = true;
+        //OtherHand.redCable = true;
+        soundTrue.Play(5);
+        Destroy(this.gameObject);
+    }
+
+    public void ActivateBlue()
+    {
+        redCable = true;
+        //OtherHand.redCable = true;
+        soundTrue.Play(5);
+        Destroy(this.gameObject);
+    }
+
+    public void ActivateGreen()
+    {
+        redCable = true;
+        //OtherHand.redCable = true;
+        soundTrue.Play(5);
+        Destroy(this.gameObject);
+    }
+
+    public void ActivatePink()
+    {
+        redCable = true;
+        //OtherHand.redCable = true;
+        soundTrue.Play(5);
+        Destroy(this.gameObject);
+    }
+
+    public void ActivatePurple()
+    {
+        redCable = true;
+        //OtherHand.redCable = true;
+        soundTrue.Play(5);
+        Destroy(this.gameObject);
+    }
+
+
+    /*
     public void OnTriggerEnter(Collider collision)
     {
         if (collision.gameObject.CompareTag("redCable"))
@@ -55,5 +123,5 @@ public class CableStorage : MonoBehaviour
             OtherHand.purpleCable = true;
             Destroy(collision.gameObject);
         }
-    }
+    }*/
 }
