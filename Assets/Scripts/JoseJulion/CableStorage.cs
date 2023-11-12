@@ -13,18 +13,20 @@ public class CableStorage : MonoBehaviour
     private bool pinkCable = false;
     private bool purpleCable = false;
     private bool InteractWith = false;
+    [SerializeField] private GameObject Lever1;
     [SerializeField] private AudioSource soundTrue;
     [SerializeField] private AudioSource soundError;
 
-    /*
-    public void SetActivation(bool value)
+    
+    public void SetActivation()
     {
         if ((redCable = true) && (blueCable = true) && (greenCable = true) && (pinkCable = true) && (purpleCable = true))
         {
-            InteractWith = value;
-            OnActivated.Invoke();
+
+            //InteractWith = value;
+            //OnActivated.Invoke();
         }
-    }*/
+    }
 
     private void Update()
     {
