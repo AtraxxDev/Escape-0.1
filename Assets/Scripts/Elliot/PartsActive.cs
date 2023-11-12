@@ -9,6 +9,10 @@ public class PartsActive : MonoBehaviour
     public GameObject Part2;
     public GameObject Part3;
     public GameObject Part4;
+
+    public Animator victoryAnimator;  // Referencia al componente Animator para la animación de victoria
+    public AudioSource victorySound;  // Referencia al componente AudioSource para el sonido de victoria
+
     private void Awake()
     {
         // Busca el objeto con la etiqueta "InventoryObject" en la escena
@@ -24,52 +28,41 @@ public class PartsActive : MonoBehaviour
         {
             Debug.LogError("No se encontró ningún objeto con la etiqueta 'InventoryObject' en la escena.");
         }
-
-      
-
     }
 
     private void Start()
     {
-        if (_inventory.Key1 == true)
-        {
-            Part1.SetActive(true);
-        }
-        else
-        {
-            Part1.SetActive(false);
+        UpdateParts();
+    }
 
-        }
+    private void UpdateParts()
+    {
+        // Actualiza el estado de las partes según las llaves en el inventario
+        Part1.SetActive(_inventory.Key1);
+        Part2.SetActive(_inventory.Key2);
+        Part3.SetActive(_inventory.Key3);
+        Part4.SetActive(_inventory.Key4);
 
-        if (_inventory.Key2 == true)
+        // Verifica si todas las llaves están en true
+        if (_inventory.Key1 && _inventory.Key2 && _inventory.Key3 && _inventory.Key4)
         {
-            Part2.SetActive(true);
+            // Si todas las llaves están en true, activa la animación y reproduce el sonido de victoria
+            PlayVictoryAnimationAndSound();
         }
-        else
-        {
-            Part2.SetActive(false);
+    }
 
-        }
-
-        if (_inventory.Key3 == true)
+    private void PlayVictoryAnimationAndSound()
+    {
+        // Activa la animación de victoria
+        if (victoryAnimator != null)
         {
-            Part3.SetActive(true);
-        }
-        else
-        {
-            Part3.SetActive(false);
-
+            victoryAnimator.SetBool("OpenFor", true);
         }
 
-        if (_inventory.Key4 == true)
+        // Reproduce el sonido de victoria
+        if (victorySound != null)
         {
-            Part4.SetActive(true);
+            victorySound.Play();
         }
-        else
-        {
-            Part4.SetActive(false);
-
-        }
-
     }
 }
