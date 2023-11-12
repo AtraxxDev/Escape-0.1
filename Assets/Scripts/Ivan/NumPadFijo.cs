@@ -10,6 +10,7 @@ public class NumPadFijo : MonoBehaviour
     public ShowPW randomCodesScript;
     public GameObject object_Animator;
     public GameObject object_Light;
+    public GameObject object_Light2;
     public AudioSource soundError;
     public AudioSource soundTrue;
     public GameObject CanvasUI1;
@@ -50,6 +51,7 @@ public class NumPadFijo : MonoBehaviour
                     Animator animator = object_Animator.GetComponent<Animator>();
                     if (animator != null)
                     {
+                        Debug.Log("Estoy abierto");
                         animator.SetTrigger("Open"); // "Abierto" es el nombre del trigger en el Animator
                         CanvasUI1.SetActive(false);
                     }
@@ -58,9 +60,20 @@ public class NumPadFijo : MonoBehaviour
                 if (object_Light != null)
                 {
                     DoorLightController doorlight = object_Light.GetComponent<DoorLightController>();
+
                     if (doorlight != null)
                     {
                         doorlight.UnlockedDoor();
+                    }
+                }
+
+                if (object_Light2 != null)
+                {
+                    DoorLightController doorlight2 = object_Light.GetComponent<DoorLightController>();
+
+                    if (doorlight2 != null)
+                    {
+                        doorlight2.UnlockedDoor();
                     }
                 }
 

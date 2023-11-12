@@ -6,8 +6,8 @@ public class NPCController : MonoBehaviour
     public float moveSpeed = 3f;   
     public float rotationSpeed = 5f; 
     public float waitTime = 2f;    
-    public Animator animator;     
-
+    public Animator animator;
+    public AudioSource grwol;
     private int currentWaypointIndex = 0;
     private float waitTimer = 0f;
     private bool isWaiting = false;  
@@ -23,11 +23,16 @@ public class NPCController : MonoBehaviour
         if (isWaiting)
         {
             SetShoutAnimation(true);
+            
 
             waitTimer -= Time.deltaTime;
             if (waitTimer <= 0f)
             {
                 isWaiting = false;
+                if (isWaiting == false)
+                {
+                    grwol.Stop();
+                }
                 SetShoutAnimation(false);
                 SwitchWaypoint();  
                 MoveToWaypoint();  
@@ -59,6 +64,7 @@ public class NPCController : MonoBehaviour
 
     void StartWaitTimer()
     {
+        grwol.Play();
         waitTimer = waitTime;
         isWaiting = true;
     }

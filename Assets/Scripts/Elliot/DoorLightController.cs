@@ -41,11 +41,13 @@ public class DoorLightController : MonoBehaviour
         if (PlayerPrefs.GetInt(clearedKey, 0) == 1)
         {
             UnlockedDoor();
+
         }
     }
 
     public void UnlockedDoor()
     {
+        Debug.Log("Desbloquee la puerta principal");
         LockDoor = false;
         LightGreen.SetActive(true);
         LightRed.SetActive(false);
@@ -55,7 +57,13 @@ public class DoorLightController : MonoBehaviour
         string currentSceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
         string clearedKey = currentSceneName + "_cleared";
 
-        if(otherDoor != null) { otherDoor.UnlockedDoor(); }
+       /* if(otherDoor != null) 
+        {
+            Debug.Log("Desbloquee la puerta Secundaria");
+
+            otherDoor.UnlockedDoor();
+            
+        }*/
 
         PlayerPrefs.SetInt(clearedKey, 1);
         PlayerPrefs.Save();
