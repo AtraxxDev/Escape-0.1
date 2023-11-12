@@ -13,23 +13,15 @@ public class CableStorage : MonoBehaviour
     private bool pinkCable = false;
     private bool purpleCable = false;
     private bool InteractWith = false;
-    [SerializeField] private GameObject Lever1;
+    [SerializeField] private GameObject LeverEspecial;
     [SerializeField] private AudioSource soundTrue;
     [SerializeField] private AudioSource soundError;
+    [SerializeField] private TurnOnOffLever tLever;
 
-    
-    public void SetActivation()
-    {
-        if ((redCable = true) && (blueCable = true) && (greenCable = true) && (pinkCable = true) && (purpleCable = true))
-        {
-
-            //InteractWith = value;
-            //OnActivated.Invoke();
-        }
-    }
 
     private void Update()
     {
+        //Si tengo todos los cables entonces el InteractWith se vuelve True
         if (redCable == true && blueCable == true && greenCable == true && pinkCable == true && purpleCable == true)
         {
             InteractWith = true;
@@ -46,6 +38,7 @@ public class CableStorage : MonoBehaviour
         else
         {
             soundTrue.Play(5);
+            tLever.LeverActivated = true;
             //Aqui pondria que se activa una de las cosas para abrir la caja
         }
         
