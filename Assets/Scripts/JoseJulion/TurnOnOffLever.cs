@@ -4,22 +4,24 @@ using UnityEngine;
 public class TurnOnOffLever: MonoBehaviour
 {
     public List<Light> lightList;
-    private bool Light1=false;
-    private bool Light2=false;
-    private bool Light3=false;
-    private bool Light4 = false;
-    private bool Activate1=true;
-    private bool Activate2=true;
-    private bool Activate3 = true;
-    private bool Activate4 = true;
-    public bool LeverActivated = false;
-    [SerializeField] private GameObject Lever1;
-    [SerializeField] private GameObject Lever2;
-    [SerializeField] private GameObject Lever3;
-    [SerializeField] private GameObject Lever4;
-    [SerializeField] private GameObject CajaShida;
-    [SerializeField] private AudioSource TurnOnLever;
-    [SerializeField] private AudioSource TurnOffLever;
+    private bool _light1=false;
+    private bool _light2 = false;
+    private bool _light3 = false;
+    private bool _light4 = false;
+    private bool _activate1 = true;
+    private bool _activate2 = true;
+    private bool _activate3 = true;
+    private bool _activate4 = true;
+    public bool leverActivated = false;
+    [SerializeField] private GameObject _lever1;
+    [SerializeField] private GameObject _lever2;
+    [SerializeField] private GameObject _lever3;
+    [SerializeField] private GameObject _lever4;
+    [SerializeField] private GameObject _cajaShida;
+    [SerializeField] private GameObject _objLight;
+    [SerializeField] private AudioSource _turnLever;
+    [SerializeField] private AudioSource _failedLever;
+    [SerializeField] private AudioSource _soundTrue;
 
     /* public void Activation()
      {
@@ -50,184 +52,229 @@ public class TurnOnOffLever: MonoBehaviour
     //Si tiene todas las luces activada se abre la caja
     public void ActivateBox()
     {
-        if (Light1 == true && Light2 == true && Light3 == true && Light4 == true)
+        if (_light1 == true && _light2 == true && _light3 == true && _light4 == true)
         {
-            if (CajaShida != null)
+            if (_cajaShida != null)
             {
-                Animator animator = CajaShida.GetComponent<Animator>();
+                Animator animator = _cajaShida.GetComponent<Animator>();
                 if (animator != null)
                 {
                     animator.SetTrigger("Open"); // "Abierto" es el nombre del trigger en el Animator
                 }
             }
+            if (_objLight != null)
+            {
+                DoorLightController doorlight = _objLight.GetComponent<DoorLightController>();
+                if (doorlight != null)
+                {
+                    doorlight.UnlockedDoor();
+                }
+            }
+            _soundTrue.Play(5);
         }
-        
+
     }
 
     public void Activation1()
     {
-        if(LeverActivated==true)
+        if(leverActivated==true)
         {
-            if (Activate1 == true)
+            if (_activate1 == true)
             {
                 //Cambia el Estado de la palanca
-                Activate1 = false;
+                _activate1 = false;
                 //Activa la luz y el booleano de la luz correspondiente
                 lightList[0].enabled = true;
-                Light1 = true;
+                _light1 = true;
                 lightList[1].enabled = true;
-                Light2 = true;
-                if (Lever1 != null)
+                _light2 = true;
+                if (_lever1 != null)
                 {
-                    Animator animator = Lever1.GetComponent<Animator>();
+                    Animator animator = _lever1.GetComponent<Animator>();
                     if (animator != null)
                     {
                         animator.SetBool("Activada", true); // "Abierto" es el nombre del trigger en el Animator
                     }
                 }
-                TurnOnLever.Play(5);
+                _turnLever.Play(5);
             }
             else
             {
-                Activate1 = true;
+                _activate1 = true;
                 lightList[0].enabled = false;
-                Light1 = false;
+                _light1 = false;
                 lightList[1].enabled = false;
-                Light2 = false;
-                if (Lever1 != null)
+                _light2 = false;
+                if (_lever1 != null)
                 {
-                    Animator animator = Lever1.GetComponent<Animator>();
+                    Animator animator = _lever1.GetComponent<Animator>();
                     if (animator != null)
                     {
                         animator.SetBool("Activada", false); // "Abierto" es el nombre del trigger en el Animator
                     }
                 }
-                TurnOffLever.Play(5);
+                _turnLever.Play(5);
             }
-        }             
+        }
+        else
+        {
+            Animator animator = _lever1.GetComponent<Animator>();
+            if (animator != null)
+            {
+                animator.SetTrigger("NuuhUhhh"); // "Abierto" es el nombre del trigger en el Animator
+            }
+            _failedLever.Play(5);
+        }
     }
 
     public void Activation2()
     {
-        if(LeverActivated==true)
+        if(leverActivated==true)
         {
-            if (Activate2 == true)
+            if (_activate2 == true)
             {
-                Activate2 = false;
+                _activate2 = false;
                 lightList[2].enabled = true;
-                Light3 = true;
+                _light3 = true;
                 lightList[1].enabled = false;
-                Light2 = false;
-                if (Lever2 != null)
+                _light2 = false;
+                if (_lever2 != null)
                 {
-                    Animator animator = Lever2.GetComponent<Animator>();
+                    Animator animator = _lever2.GetComponent<Animator>();
                     if (animator != null)
                     {
                         animator.SetBool("Activada", true); // "Abierto" es el nombre del trigger en el Animator
                     }
                 }
-                TurnOnLever.Play(5);
+                _turnLever.Play(5);
             }
             else
             {
-                Activate2 = true;
+                _activate2 = true;
                 lightList[2].enabled = false;
-                Light3 = false;
+                _light3 = false;
                 lightList[1].enabled = true;
-                Light2 = true;
-                if (Lever2 != null)
+                _light2 = true;
+                if (_lever2 != null)
                 {
-                    Animator animator = Lever2.GetComponent<Animator>();
+                    Animator animator = _lever2.GetComponent<Animator>();
                     if (animator != null)
                     {
                         animator.SetBool("Activada", false); // "Abierto" es el nombre del trigger en el Animator
                     }
                 }
-                TurnOffLever.Play(5);
+                _turnLever.Play(5);
             }
+        }
+        else
+        {
+            Animator animator = _lever2.GetComponent<Animator>();
+            if (animator != null)
+            {
+                animator.SetTrigger("NuuhUhhh"); // "Abierto" es el nombre del trigger en el Animator
+            }
+            _failedLever.Play(5);
         }
         
     }
 
     public void Activation3()
     {
-        if(LeverActivated == true)
+        if(leverActivated == true)
         {
-            if (Activate3 == true)
+            if (_activate3 == true)
             {
-                Activate3 = false;
+                _activate3 = false;
                 lightList[3].enabled = true;
-                Light4 = true;
+                _light4 = true;
                 lightList[2].enabled = false;
-                Light3 = false;
-                if (Lever3 != null)
+                _light3 = false;
+                if (_lever3 != null)
                 {
-                    Animator animator = Lever3.GetComponent<Animator>();
+                    Animator animator = _lever3.GetComponent<Animator>();
                     if (animator != null)
                     {
                         animator.SetBool("Activada", true); // "Abierto" es el nombre del trigger en el Animator
                     }
                 }
-                TurnOnLever.Play(5);
+                _turnLever.Play(5);
             }
             else
             {
-                Activate3 = true;
+                _activate3 = true;
                 lightList[3].enabled = false;
-                Light4 = false;
+                _light4 = false;
                 lightList[2].enabled = true;
-                Light3 = true;
-                if (Lever3 != null)
+                _light3 = true;
+                if (_lever3 != null)
                 {
-                    Animator animator = Lever3.GetComponent<Animator>();
+                    Animator animator = _lever3.GetComponent<Animator>();
                     if (animator != null)
                     {
                         animator.SetBool("Activada", false); // "Abierto" es el nombre del trigger en el Animator
                     }
                 }
-                TurnOffLever.Play(5);
+                _turnLever.Play(5);
             }
-        }              
+        }
+        else
+        {
+            Animator animator = _lever3.GetComponent<Animator>();
+            if (animator != null)
+            {
+                animator.SetTrigger("NuuhUhhh"); // "Abierto" es el nombre del trigger en el Animator
+            }
+            _failedLever.Play(5);
+        }
     }
 
     public void Activation4()
     {
-        if(LeverActivated==true)
+        if(leverActivated==true)
         {
-            if (Activate4 == true)
+            if (_activate4 == true)
             {
-                Activate4 = false;
+                _activate4 = false;
                 lightList[2].enabled = true;
-                Light3 = true;
+                _light3 = true;
                 lightList[0].enabled = false;
-                Light1 = false;
-                if (Lever4 != null)
+                _light1 = false;
+                if (_lever4 != null)
                 {
-                    Animator animator = Lever4.GetComponent<Animator>();
+                    Animator animator = _lever4.GetComponent<Animator>();
                     if (animator != null)
                     {
                         animator.SetBool("Activada", true); // "Abierto" es el nombre del trigger en el Animator
                     }
                 }
-                TurnOnLever.Play(5);
+                _turnLever.Play(5);
             }
             else
             {
-                Activate4 = true;
+                _activate4 = true;
                 lightList[2].enabled = false;
-                Light3 = false;
+                _light3 = false;
                 lightList[0].enabled = true;
-                Light1 = true;
-                if (Lever4 != null)
+                _light1 = true;
+                if (_lever4 != null)
                 {
-                    Animator animator = Lever4.GetComponent<Animator>();
+                    Animator animator = _lever4.GetComponent<Animator>();
                     if (animator != null)
                     {
                         animator.SetBool("Activada", false); // "Abierto" es el nombre del trigger en el Animator
                     }
                 }
-                TurnOffLever.Play(5);
+                _turnLever.Play(5);
             }
-        }              
+        }
+        else
+        {
+            Animator animator = _lever4.GetComponent<Animator>();
+            if (animator != null)
+            {
+                animator.SetTrigger("NuuhUhhh"); // "Abierto" es el nombre del trigger en el Animator
+            }
+            _failedLever.Play(5);
+        }
     }
 }

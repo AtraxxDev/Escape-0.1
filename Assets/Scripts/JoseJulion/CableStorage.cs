@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.Antlr3.Runtime;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -19,7 +20,7 @@ public class CableStorage : MonoBehaviour
     [SerializeField] private TurnOnOffLever tLever;
 
 
-    private void Update()
+    private void FixedUpdate()
     {
         //Si tengo todos los cables entonces el InteractWith se vuelve True
         if (redCable == true && blueCable == true && greenCable == true && pinkCable == true && purpleCable == true)
@@ -34,12 +35,27 @@ public class CableStorage : MonoBehaviour
         {
             //Aqui pondria como animación fallida y un sonido de que fallo
             soundError.Play(5);
+            if (LeverEspecial != null)
+            {
+                Animator animator = LeverEspecial.GetComponent<Animator>();
+                if (animator != null)
+                {
+                    animator.SetBool("cables", false); 
+                }
+            }
         }
         else
         {
             soundTrue.Play(5);
-            tLever.LeverActivated = true;
-            //Aqui pondria que se activa una de las cosas para abrir la caja
+            tLever.leverActivated = true;
+            if (LeverEspecial != null)
+            {
+                Animator animator = LeverEspecial.GetComponent<Animator>();
+                if (animator != null)
+                {
+                    animator.SetBool("cables", true); 
+                }
+            }
         }
         
     }
