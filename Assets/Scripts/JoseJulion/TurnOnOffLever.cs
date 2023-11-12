@@ -58,7 +58,6 @@ public class TurnOnOffLever: MonoBehaviour
                 if (animator != null)
                 {
                     animator.SetTrigger("Open"); // "Abierto" es el nombre del trigger en el Animator
-                                                 // CanvasUI1.SetActive(false);
                 }
             }
         }
@@ -193,41 +192,42 @@ public class TurnOnOffLever: MonoBehaviour
 
     public void Activation4()
     {
-        if(Activate4==true)
+        if(LeverActivated==true)
         {
-            Activate4 = false;
-            lightList[2].enabled = true;
-            Light3 = true;
-            lightList[0].enabled = false;
-            Light1 = false;
-            if (Lever4 != null)
+            if (Activate4 == true)
             {
-                Animator animator = Lever4.GetComponent<Animator>();
-                if (animator != null)
+                Activate4 = false;
+                lightList[2].enabled = true;
+                Light3 = true;
+                lightList[0].enabled = false;
+                Light1 = false;
+                if (Lever4 != null)
                 {
-                    animator.SetBool("Activada", true); // "Abierto" es el nombre del trigger en el Animator
+                    Animator animator = Lever4.GetComponent<Animator>();
+                    if (animator != null)
+                    {
+                        animator.SetBool("Activada", true); // "Abierto" es el nombre del trigger en el Animator
+                    }
                 }
+                TurnOnLever.Play(5);
             }
-            TurnOnLever.Play(5);
-        }
-        else
-        {
-            Activate4 = true;
-            lightList[2].enabled = false;
-            Light3 = false;
-            lightList[0].enabled = true;
-            Light1 = true;
-            if (Lever4 != null)
+            else
             {
-                Animator animator = Lever4.GetComponent<Animator>();
-                if (animator != null)
+                Activate4 = true;
+                lightList[2].enabled = false;
+                Light3 = false;
+                lightList[0].enabled = true;
+                Light1 = true;
+                if (Lever4 != null)
                 {
-                    animator.SetBool("Activada", false); // "Abierto" es el nombre del trigger en el Animator
+                    Animator animator = Lever4.GetComponent<Animator>();
+                    if (animator != null)
+                    {
+                        animator.SetBool("Activada", false); // "Abierto" es el nombre del trigger en el Animator
+                    }
                 }
+                TurnOffLever.Play(5);
             }
-            TurnOffLever.Play(5);
-        }
-       
-
+        }              
     }
 }
