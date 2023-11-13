@@ -15,14 +15,20 @@ EditorBuildSettings:
     path: Assets/Scenes/LV2-CONCEPTO.unity
     guid: e134ceea969e98641bf9c20de5c7d4ab
   - enabled: 1
-    path: Assets/Scenes/HandLvl3.unity
-    guid: 7944b362b80da5f4595c36f7d2d0bfaf
+    path: Assets/Scenes/HandLV3Nmms.unity
+    guid: 7e130f6beb632da4480b96aa30463507
   - enabled: 1
     path: Assets/Scenes/HandLvl4.unity
     guid: cefdfeb7e3e8e7f4eb38519863275a76
   - enabled: 1
     path: Assets/Scenes/HandLobby.unity
     guid: dda21ff29b4d2cf479eae7c0de69853e
+  - enabled: 1
+    path: Assets/Scenes/HandLvlLose.unity
+    guid: cc40116953d6231409fef162e7a37877
+  - enabled: 1
+    path: Assets/Scenes/HandLvlWin.unity
+    guid: 34ef4a643ea5c1e45b0e036b0f289afa
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 6f43243bc5ecf884aaccf118a59f7503, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 9e83c514ea06670419098d64052eed5d, type: 2}

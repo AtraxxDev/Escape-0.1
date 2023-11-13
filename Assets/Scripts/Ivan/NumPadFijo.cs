@@ -69,7 +69,7 @@ public class NumPadFijo : MonoBehaviour
 
                 if (object_Light2 != null)
                 {
-                    DoorLightController doorlight2 = object_Light.GetComponent<DoorLightController>();
+                    DoorLightController doorlight2 = object_Light2.GetComponent<DoorLightController>();
 
                     if (doorlight2 != null)
                     {

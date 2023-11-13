@@ -13,6 +13,7 @@ public class TurnOnOffLever: MonoBehaviour
     private bool _activate3 = true;
     private bool _activate4 = true;
     public bool leverActivated = false;
+    public bool ispuzzleResult = false;
     [SerializeField] private GameObject _lever1;
     [SerializeField] private GameObject _lever2;
     [SerializeField] private GameObject _lever3;
@@ -22,6 +23,7 @@ public class TurnOnOffLever: MonoBehaviour
     [SerializeField] private AudioSource _turnLever;
     [SerializeField] private AudioSource _failedLever;
     [SerializeField] private AudioSource _soundTrue;
+    [SerializeField] private AudioSource _soundCompleteLevel;
 
     /* public void Activation()
      {
@@ -44,34 +46,51 @@ public class TurnOnOffLever: MonoBehaviour
          }
      }*/
 
-    public void FixedUpdate()
+    /*public void FixedUpdate()
+    {
+        ActivateBox();
+    }*/
+
+    //Si tiene todas las luces activada se abre la caja
+    private void Update()
     {
         ActivateBox();
     }
 
-    //Si tiene todas las luces activada se abre la caja
     public void ActivateBox()
     {
-        if (_light1 == true && _light2 == true && _light3 == true && _light4 == true)
+
+        if (_light1 == true && _light2 == true && _light3 == true && _light4 == true && !ispuzzleResult)
         {
-            if (_cajaShida != null)
-            {
-                Animator animator = _cajaShida.GetComponent<Animator>();
-                if (animator != null)
+
+                _soundTrue.Play();
+                _soundCompleteLevel.Play();
+
+
+                if (_cajaShida != null)
                 {
-                    animator.SetTrigger("Open"); // "Abierto" es el nombre del trigger en el Animator
+                    Animator animator = _cajaShida.GetComponent<Animator>();
+                    if (animator != null)
+                    {
+                        animator.SetTrigger("Open"); // "Abierto" es el nombre del trigger en el Animator
+
+                    }
                 }
-            }
-            if (_objLight != null)
-            {
-                DoorLightController doorlight = _objLight.GetComponent<DoorLightController>();
-                if (doorlight != null)
+                if (_objLight != null)
                 {
-                    doorlight.UnlockedDoor();
+                    DoorLightController doorlight = _objLight.GetComponent<DoorLightController>();
+                    if (doorlight != null)
+                    {
+                        doorlight.UnlockedDoor();
+                    }
                 }
-            }
-            _soundTrue.Play(5);
+            ispuzzleResult = true;
+            Debug.Log("Complete el puzzle");
         }
+
+
+
+
 
     }
 
@@ -96,7 +115,7 @@ public class TurnOnOffLever: MonoBehaviour
                         animator.SetBool("Activada", true); // "Abierto" es el nombre del trigger en el Animator
                     }
                 }
-                _turnLever.Play(5);
+                _turnLever.Play();
             }
             else
             {
@@ -113,7 +132,7 @@ public class TurnOnOffLever: MonoBehaviour
                         animator.SetBool("Activada", false); // "Abierto" es el nombre del trigger en el Animator
                     }
                 }
-                _turnLever.Play(5);
+                _turnLever.Play();
             }
         }
         else
@@ -123,7 +142,7 @@ public class TurnOnOffLever: MonoBehaviour
             {
                 animator.SetTrigger("NuuhUhhh"); // "Abierto" es el nombre del trigger en el Animator
             }
-            _failedLever.Play(5);
+            _failedLever.Play();
         }
     }
 
@@ -163,7 +182,7 @@ public class TurnOnOffLever: MonoBehaviour
                         animator.SetBool("Activada", false); // "Abierto" es el nombre del trigger en el Animator
                     }
                 }
-                _turnLever.Play(5);
+                _turnLever.Play();
             }
         }
         else
@@ -173,7 +192,7 @@ public class TurnOnOffLever: MonoBehaviour
             {
                 animator.SetTrigger("NuuhUhhh"); // "Abierto" es el nombre del trigger en el Animator
             }
-            _failedLever.Play(5);
+            _failedLever.Play();
         }
         
     }
@@ -197,7 +216,7 @@ public class TurnOnOffLever: MonoBehaviour
                         animator.SetBool("Activada", true); // "Abierto" es el nombre del trigger en el Animator
                     }
                 }
-                _turnLever.Play(5);
+                _turnLever.Play();
             }
             else
             {
@@ -214,7 +233,7 @@ public class TurnOnOffLever: MonoBehaviour
                         animator.SetBool("Activada", false); // "Abierto" es el nombre del trigger en el Animator
                     }
                 }
-                _turnLever.Play(5);
+                _turnLever.Play();
             }
         }
         else
@@ -224,7 +243,7 @@ public class TurnOnOffLever: MonoBehaviour
             {
                 animator.SetTrigger("NuuhUhhh"); // "Abierto" es el nombre del trigger en el Animator
             }
-            _failedLever.Play(5);
+            _failedLever.Play();
         }
     }
 
@@ -247,7 +266,7 @@ public class TurnOnOffLever: MonoBehaviour
                         animator.SetBool("Activada", true); // "Abierto" es el nombre del trigger en el Animator
                     }
                 }
-                _turnLever.Play(5);
+                _turnLever.Play();
             }
             else
             {
@@ -264,7 +283,7 @@ public class TurnOnOffLever: MonoBehaviour
                         animator.SetBool("Activada", false); // "Abierto" es el nombre del trigger en el Animator
                     }
                 }
-                _turnLever.Play(5);
+                _turnLever.Play();
             }
         }
         else
@@ -274,7 +293,7 @@ public class TurnOnOffLever: MonoBehaviour
             {
                 animator.SetTrigger("NuuhUhhh"); // "Abierto" es el nombre del trigger en el Animator
             }
-            _failedLever.Play(5);
+            _failedLever.Play();
         }
     }
 }

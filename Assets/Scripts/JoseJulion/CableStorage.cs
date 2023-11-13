@@ -14,18 +14,36 @@ public class CableStorage : MonoBehaviour
     private bool pinkCable = false;
     private bool purpleCable = false;
     private bool InteractWith = false;
+
+    private bool AllCables = false;
+
     [SerializeField] private GameObject LeverEspecial;
     [SerializeField] private AudioSource soundTrue;
     [SerializeField] private AudioSource soundError;
+    [SerializeField] private AudioSource _allCableSound;
+    [SerializeField] private AudioSource _takeCableSound;
     [SerializeField] private TurnOnOffLever tLever;
 
+    [SerializeField] GameObject _redCable;
+    [SerializeField] GameObject _blueCable;
+    [SerializeField] GameObject _greenCable;
+    [SerializeField] GameObject _pinkCable;
+    [SerializeField] GameObject _purpleCable;
 
-    private void FixedUpdate()
+
+    private void Update()
+    {
+        CheckCables();
+    }
+
+    public void CheckCables()
     {
         //Si tengo todos los cables entonces el InteractWith se vuelve True
-        if (redCable == true && blueCable == true && greenCable == true && pinkCable == true && purpleCable == true)
+        if (redCable == true && blueCable == true && greenCable == true && pinkCable == true && purpleCable == true && !AllCables)
         {
             InteractWith = true;
+            _allCableSound.Play();
+            AllCables = true;
         }
     }
 
@@ -34,26 +52,26 @@ public class CableStorage : MonoBehaviour
         if(InteractWith==false)
         {
             //Aqui pondria como animación fallida y un sonido de que fallo
-            soundError.Play(5);
+            soundError.Play();
             if (LeverEspecial != null)
             {
                 Animator animator = LeverEspecial.GetComponent<Animator>();
                 if (animator != null)
                 {
-                    animator.SetBool("cables", false); 
+                    animator.SetTrigger("Wrong");
                 }
             }
         }
         else
         {
-            soundTrue.Play(5);
+            soundTrue.Play();
             tLever.leverActivated = true;
             if (LeverEspecial != null)
             {
                 Animator animator = LeverEspecial.GetComponent<Animator>();
                 if (animator != null)
                 {
-                    animator.SetBool("cables", true); 
+                    animator.SetTrigger("Correct");
                 }
             }
         }
@@ -64,40 +82,40 @@ public class CableStorage : MonoBehaviour
     {
         redCable = true;
         //OtherHand.redCable = true;
-        soundTrue.Play(5);
-        Destroy(this.gameObject);
+        _takeCableSound.Play();
+        _redCable.SetActive(false);
     }
 
     public void ActivateBlue()
     {
-        redCable = true;
+        blueCable = true;
         //OtherHand.redCable = true;
-        soundTrue.Play(5);
-        Destroy(this.gameObject);
+        _takeCableSound.Play();
+        _blueCable.SetActive(false);
     }
 
     public void ActivateGreen()
     {
-        redCable = true;
+        greenCable = true;
         //OtherHand.redCable = true;
-        soundTrue.Play(5);
-        Destroy(this.gameObject);
+        _takeCableSound.Play();
+        _greenCable.SetActive(false);
     }
 
     public void ActivatePink()
     {
-        redCable = true;
+        pinkCable = true;
         //OtherHand.redCable = true;
-        soundTrue.Play(5);
-        Destroy(this.gameObject);
+        _takeCableSound.Play();
+        _pinkCable.SetActive(false);
     }
 
     public void ActivatePurple()
     {
-        redCable = true;
+        purpleCable = true;
         //OtherHand.redCable = true;
-        soundTrue.Play(5);
-        Destroy(this.gameObject);
+        _takeCableSound.Play();
+        _purpleCable.SetActive(false);
     }
 
 

@@ -10,6 +10,9 @@ public class PartsActive : MonoBehaviour
     public GameObject Part3;
     public GameObject Part4;
 
+    public GameObject Taser1;
+
+
     public Animator victoryAnimator;  // Referencia al componente Animator para la animación de victoria
     public AudioSource victorySound;  // Referencia al componente AudioSource para el sonido de victoria
 
@@ -48,6 +51,7 @@ public class PartsActive : MonoBehaviour
         {
             // Si todas las llaves están en true, activa la animación y reproduce el sonido de victoria
             PlayVictoryAnimationAndSound();
+            Taser1.SetActive(true);
         }
     }
 

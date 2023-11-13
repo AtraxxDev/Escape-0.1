@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeScale: 1
+  finishsound: {fileID: 8300000, guid: 554716277d1d2764295e8dcf49c54cff, type: 3}
   initialTime: 1200
   minuteSound: {fileID: 8300000, guid: 42c630909f949b44e93f95bb00fb7ad9, type: 3}
 --- !u!82 &421950719

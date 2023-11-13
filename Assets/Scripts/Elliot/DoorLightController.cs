@@ -16,7 +16,7 @@ public class DoorLightController : MonoBehaviour
     public AudioSource UnlockSound;
     public OnAndOffObject on_off;
 
-    public DoorLightController otherDoor;
+    //public DoorLightController otherDoor;
     // Start is called before the first frame update
     void Start()
     {

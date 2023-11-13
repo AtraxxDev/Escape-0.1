@@ -686,12 +686,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isLobby: 1
   isRoom: 0
+  isWin: 0
+  isGameOver: 0
+  isDie: 0
   fadeScreen: {fileID: 1948693208}
   on_off: {fileID: 85359835}
   sound1: {fileID: 1988076557}
   sound2: {fileID: 516403008}
   sound3: {fileID: 1486117830}
   soundAmbient: {fileID: 1270018278}
+  _soundWin1: {fileID: 0}
+  _soundWin2: {fileID: 0}
+  _monster: {fileID: 0}
+  _soundLose1: {fileID: 0}
+  _soundLose2: {fileID: 0}
 --- !u!4 &85359834
 Transform:
   m_ObjectHideFlags: 0
@@ -15534,7 +15542,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5773256366622995465, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.55
+      value: -0.842
       objectReference: {fileID: 0}
     - target: {fileID: 5773256366622995465, guid: 5eccbf4be2c00e94689ee8062e4e7276, type: 3}
       propertyPath: m_LocalPosition.z

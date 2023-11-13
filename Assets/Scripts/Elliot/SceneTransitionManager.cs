@@ -6,12 +6,23 @@ public class SceneTransitionManager : MonoBehaviour
 {
     public bool isLobby;
     public bool isRoom;
+    public bool isWin;
+    public bool isGameOver;
+    public bool isDie;
     public FadeScreen fadeScreen;
     public OnAndOffObject on_off;
     public AudioSource sound1;
     public AudioSource sound2;
     public AudioSource sound3;
     public AudioSource soundAmbient;
+
+    [Header("Win")]
+    public AudioSource _soundWin1;
+    public AudioSource _soundWin2;
+    public GameObject _monster;
+    [Header("Lose")]
+    public AudioSource _soundLose1;
+    public AudioSource _soundLose2;
 
     public void GoToSceneAsync(int sceneIndex)
     {
@@ -71,6 +82,71 @@ public class SceneTransitionManager : MonoBehaviour
             // Reproduce el tercer sonido
             sound3.Play();
             yield return new WaitForSeconds(sound3.clip.length);
+
+        }
+
+        else if (isWin)
+        {
+            if(_monster != null) 
+            {
+                _monster.SetActive(false);
+            }
+            
+            // Espera a que la pantalla esté completamente oscura
+            while (fadeScreen.rend.material.color.a < 1)
+            {
+                yield return null;
+            }
+
+
+            // Reproduce el primer sonido
+            _soundWin1.Play();
+            yield return new WaitForSeconds(_soundWin1.clip.length);
+
+
+            yield return new WaitForSeconds(1.0f);
+
+            // Reproduce el segundo sonido
+            _soundWin2.Play();
+            yield return new WaitForSeconds(_soundWin2.clip.length + 1.0f);
+
+
+        }
+
+        else if (isGameOver)
+        {
+            if (_monster != null)
+            {
+                _monster.SetActive(false);
+            }
+            // Espera a que la pantalla esté completamente oscura
+            while (fadeScreen.rend.material.color.a < 1)
+            {
+                yield return null;
+            }
+
+            // Reproduce el primer sonido
+            _soundLose1.Play();
+            yield return new WaitForSeconds(_soundLose1.clip.length);
+
+
+            yield return new WaitForSeconds(1.0f);
+
+            // Reproduce el segundo sonido
+            _soundLose2.Play();
+            yield return new WaitForSeconds(_soundLose2.clip.length + 1.0f);
+
+        }
+
+        else if (isDie)
+        {
+            // Espera a que la pantalla esté completamente oscura
+            while (fadeScreen.rend.material.color.a < 1)
+            {
+                yield return null;
+            }
+
+            TimerManager.instance.ResetTimer();
 
         }
 

@@ -23982,7 +23982,6 @@ MonoBehaviour:
   lockSound: {fileID: 7010008672457089575}
   UnlockSound: {fileID: 7010008672950126966}
   on_off: {fileID: 0}
-  otherDoor: {fileID: 0}
 --- !u!1001 &7010008673478606935
 PrefabInstance:
   m_ObjectHideFlags: 0

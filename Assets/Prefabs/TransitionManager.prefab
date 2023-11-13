@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 710126370544927460}
   - component: {fileID: 710126370544927463}
+  - component: {fileID: 401651734}
   m_Layer: 0
   m_Name: TransitionManager
   m_TagString: Untagged
@@ -44,4 +45,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7483fb399c0667f459e7c63e2ceadf1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isLobby: 0
+  isRoom: 1
+  isWin: 0
+  isGameOver: 0
   fadeScreen: {fileID: 0}
+  on_off: {fileID: 401651734}
+  sound1: {fileID: 0}
+  sound2: {fileID: 0}
+  sound3: {fileID: 0}
+  soundAmbient: {fileID: 0}
+  _soundWin1: {fileID: 0}
+  _soundWin2: {fileID: 0}
+  _monster: {fileID: 0}
+  _soundLose1: {fileID: 0}
+  _soundLose2: {fileID: 0}
+--- !u!114 &401651734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710126370544927461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: feace3da24acada4ab5fdf0112032d6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _object: {fileID: 0}

@@ -1,18 +1,21 @@
+using System.Collections;
 using UnityEngine;
 
 public class TimerManager : MonoBehaviour
 {
     public static TimerManager instance;
-    private float elapsedTime; // Agrega esta línea
+    private float elapsedTime;
     private float startTime;
-    private float timeRemaining = 1200.0f; // 20 minutos en segundos
-    private float timeToNextMinute = 60.0f; // tiempo para el próximo minuto
-    public float timeScale = 1.0f; // Factor de escala para ajustar la velocidad del temporizador
+    private float timeRemaining = 1200.0f;
+    private float timeToNextMinute = 60.0f;
+    public float timeScale = 1.0f;
     public AudioClip finishsound;
-    [SerializeField] private float initialTime = 1200.0f; // Tiempo inicial en segundos, se muestra en el inspector
 
-    public AudioClip minuteSound; // Sonido para cada minuto
+    [SerializeField] private float initialTime = 1200.0f;
+    public AudioClip minuteSound;
+
     private AudioSource audioSource;
+    private GameManager gameManager; // Ahora es privado
 
     public bool IsTimerRunning { get; private set; } = true;
 
@@ -29,11 +32,11 @@ public class TimerManager : MonoBehaviour
         }
 
         audioSource = GetComponent<AudioSource>();
+        gameManager = FindObjectOfType<GameManager>(); // Busca el GameManager en la escena
     }
 
     private void Start()
     {
-        // Establece el tiempo inicial como initialTime desde el inspector
         timeRemaining = initialTime;
         startTime = Time.time;
     }
@@ -49,7 +52,7 @@ public class TimerManager : MonoBehaviour
     private void UpdateTimer()
     {
         elapsedTime = Time.time - startTime;
-        timeRemaining = Mathf.Max(0f, initialTime - elapsedTime * timeScale); // Ajustar la velocidad del temporizador
+        timeRemaining = Mathf.Max(0f, initialTime - elapsedTime * timeScale);
 
         if (elapsedTime >= timeToNextMinute)
         {
@@ -61,7 +64,7 @@ public class TimerManager : MonoBehaviour
         if (timeRemaining <= 0f)
         {
             timeRemaining = 0f;
-            HandleTimerZeroLogic(); // Maneja la lógica cuando el temporizador llega a cero
+            HandleTimerZeroLogic();
         }
     }
 
@@ -74,36 +77,35 @@ public class TimerManager : MonoBehaviour
     {
         int minutes = Mathf.FloorToInt(elapsedTime / 60);
 
-        // Agrega eventos según los minutos restantes
-
         if (minutes == 19)
         {
-            // Evento para 1 minuto restante
             Debug.Log("Evento para 1 minuto restante");
         }
-
         else if (minutes == 15)
         {
-            // Evento para 5 minutos restantes
             Debug.Log("Evento para 5 minutos restantes");
         }
         else if (minutes == 10)
         {
-            // Evento para 10 minutos restantes
             Debug.Log("Evento para 10 minutos restantes");
         }
         else if (minutes == 5)
         {
-            // Evento para 15 minutos restantes
             Debug.Log("Evento para 15 minutos restantes");
         }
     }
 
     private void HandleTimerZeroLogic()
     {
-        // Maneja la lógica cuando el temporizador llega a cero (por ejemplo, fin del juego).
         Debug.Log("Temporizador llegó a cero. Manejando lógica de final de juego.");
+        StartCoroutine(FinishEvent());
+    }
+
+    IEnumerator FinishEvent()
+    {
         audioSource.PlayOneShot(finishsound);
+        yield return new WaitForSeconds(10);
+        gameManager.GameOver();
     }
 
     public float GetTimeRemaining()
@@ -126,4 +128,23 @@ public class TimerManager : MonoBehaviour
         IsTimerRunning = true;
         startTime = Time.time - (initialTime - timeRemaining) / timeScale;
     }
+
+    public void ResetTimer()
+    {
+        IsTimerRunning = true;
+        startTime = Time.time;
+        timeToNextMinute = 60.0f;
+        timeRemaining = initialTime;
+    }
+
+
+
+
+
+
+
+
+
+
+
 }
