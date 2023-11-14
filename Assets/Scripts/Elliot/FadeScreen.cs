@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class FadeScreen : MonoBehaviour
 {
+    public static FadeScreen instance;
+
     public bool fadeOnStart = true;
     public float fadeDuration = 3;
     public Color fadeColor;
     public Renderer rend;
-    public OnAndOffObject on_off;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +23,7 @@ public class FadeScreen : MonoBehaviour
         StartCoroutine(FadeRoutine(1, 0, () =>
         {
             Debug.Log("Me voy a apagar");
-            on_off.ObjectOff();
+            GameManager.instance.ObjectOff();
             Debug.Log("Me apague");
             // Agrega el código que deseas ejecutar después de la transición de fade aquí
         }));

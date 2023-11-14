@@ -15,7 +15,6 @@ public class TimerManager : MonoBehaviour
     public AudioClip minuteSound;
 
     private AudioSource audioSource;
-    private GameManager gameManager; // Ahora es privado
 
     public bool IsTimerRunning { get; private set; } = true;
 
@@ -32,7 +31,7 @@ public class TimerManager : MonoBehaviour
         }
 
         audioSource = GetComponent<AudioSource>();
-        gameManager = FindObjectOfType<GameManager>(); // Busca el GameManager en la escena
+        //gameManager = FindObjectOfType<GameManager>(); // Busca el GameManager en la escena
     }
 
     private void Start()
@@ -105,7 +104,7 @@ public class TimerManager : MonoBehaviour
     {
         audioSource.PlayOneShot(finishsound);
         yield return new WaitForSeconds(10);
-        gameManager.GameOver();
+        //.GameOver();
     }
 
     public float GetTimeRemaining()

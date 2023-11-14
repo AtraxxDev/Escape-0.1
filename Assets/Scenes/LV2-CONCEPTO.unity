@@ -682,7 +682,6 @@ MonoBehaviour:
   _numberSceneLoad: 4
   LightGreen: {fileID: 1365664400}
   LightRed: {fileID: 707988649}
-  _sceneTransition: {fileID: 806919382}
   lockSound: {fileID: 1234235511}
   UnlockSound: {fileID: 608115494}
   on_off: {fileID: 806919381}
@@ -6996,6 +6995,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TransitionManager
       objectReference: {fileID: 0}
+    - target: {fileID: 710126370544927461, guid: ef613c9d1cbbcd54a844ab90fb7194b6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 710126370544927463, guid: ef613c9d1cbbcd54a844ab90fb7194b6, type: 3}
       propertyPath: on_off
       value: 
@@ -7686,6 +7689,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TimerManager
       objectReference: {fileID: 0}
+    - target: {fileID: 3442562879425876746, guid: e89cfe7f7665169488623d5363b47105, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e89cfe7f7665169488623d5363b47105, type: 3}
 --- !u!1001 &1068165675
@@ -8028,6 +8035,10 @@ PrefabInstance:
     - target: {fileID: 6621816749891834298, guid: 2e8c5be652dbba84eb914c76773be233, type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6621816749891834298, guid: 2e8c5be652dbba84eb914c76773be233, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6621816749891834299, guid: 2e8c5be652dbba84eb914c76773be233, type: 3}
       propertyPath: _sceneTransitionManager
@@ -13722,7 +13733,6 @@ MonoBehaviour:
   fadeDuration: 2.5
   fadeColor: {r: 0, g: 0, b: 0, a: 0}
   rend: {fileID: 1726570343}
-  on_off: {fileID: 806919381}
 --- !u!1 &1949576470
 GameObject:
   m_ObjectHideFlags: 0

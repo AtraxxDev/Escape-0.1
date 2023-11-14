@@ -10,7 +10,6 @@ public class DoorLightController : MonoBehaviour
 
     public GameObject LightRed;
 
-    public SceneTransitionManager _sceneTransition;
    // public Animator _anim;
     public AudioSource lockSound;
     public AudioSource UnlockSound;
@@ -83,7 +82,7 @@ public class DoorLightController : MonoBehaviour
             on_off.ObjectOn();
             Debug.Log("Me Prendi");
             UnlockSound.Play();           
-            _sceneTransition.GoToSceneAsync(_numberSceneLoad);
+            GameManager.instance.GoToSceneAsync(_numberSceneLoad);
         }
     }
 

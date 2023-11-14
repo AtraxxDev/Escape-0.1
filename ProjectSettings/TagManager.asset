@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Pieza1
   - InventoryObject
+  - FadeCamera
   layers:
   - Default
   - TransparentFX
