@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    //public AudioSource soundWater;
 
     // Variables Scene Transition
     [Header("Scene Transition")]
@@ -58,6 +59,13 @@ public class GameManager : MonoBehaviour
 
     //Variables On and off object
 
+    [Header("Monster")]
+    public AudioSource breathingPlayer;
+    public AudioSource sreamerSound;
+    public GameObject _Monster;
+    [SerializeField] private bool isMonsterEncountered = false;
+
+
     [Header("On and Off")]
 
     public GameObject _object;
@@ -99,6 +107,12 @@ public class GameManager : MonoBehaviour
         if (_object == null && !isFadeEncountered)
         {
             findObject();
+        }
+
+        // Solo realiza la búsqueda si _object es nulo y aún no se ha encontrado la cámara
+        if (_Monster == null && !isMonsterEncountered)
+        {
+            findMonster();
         }
 
         // Solo realiza la búsqueda si _object es nulo y aún no se ha encontrado la cámara
@@ -170,12 +184,21 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log("Temporizador llegó a cero. Manejando lógica de final de juego.");
         StartCoroutine(FinishEvent());
+
     }
 
     IEnumerator FinishEvent()
     {
+        //soundWater.Stop();
         audioSource.PlayOneShot(finishsound);
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(2);
+        breathingPlayer.Play();
+        yield return new WaitForSeconds(5);
+        breathingPlayer.Stop();
+        yield return new WaitForSeconds(3);
+        ActivateMonster();
+        sreamerSound.Play();
+        yield return new WaitForSeconds(1);
         GameOver();
     }
 
@@ -471,6 +494,39 @@ public void ResetTimer()
             }
         }
     }
+
+    // Monster
+    public void findMonster()
+    {
+        if (_Monster == null)
+        {
+            // Encuentra el primer objeto con la etiqueta "MainCamera"
+            GameObject monsterObject = GameObject.FindGameObjectWithTag("Monster");
+
+            if (monsterObject != null)
+            {
+                // Asigna el objeto encontrado a la variable _object
+                _Monster = monsterObject;
+                isMonsterEncountered = true;
+                Debug.Log("Encontre al mounstro");
+            }
+            else
+            {
+                Debug.LogWarning("No se encontró ningún objeto con la etiqueta 'Monster'.");
+            }
+        }
+    }
+
+    private void ActivateMonster()
+    {
+        if (_Monster != null)
+        {
+            _Monster.SetActive(true);
+            Debug.Log("Activando el monstruo.");
+        }
+
+    }
+
 
     //Scene Status
     public void SetIsLobby(bool value)

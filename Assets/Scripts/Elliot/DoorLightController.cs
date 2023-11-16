@@ -82,8 +82,8 @@ public class DoorLightController : MonoBehaviour
             GameManager.instance.ObjectOn();
             Debug.Log("Me Prendi");
             UnlockSound.Play();
-            GameManager.instance.PauseTimer();
-            Debug.Log("Estoy en pausa");
+           // GameManager.instance.PauseTimer();
+           // Debug.Log("Estoy en pausa");
             GameManager.instance.GoToSceneAsync(_numberSceneLoad);
         }
     }
