@@ -18,10 +18,13 @@ public class GameManager : MonoBehaviour
     public bool isWin;
     public bool isGameOver;
     public bool isDie;
+    public bool isFinish;
     public AudioSource sound1;
     public AudioSource sound2;
     public AudioSource sound3;
     public AudioSource soundAmbient;
+
+    private string nextsceneName;
 
     [Header("Win")]
     public AudioSource _soundWin1;
@@ -197,13 +200,15 @@ public class GameManager : MonoBehaviour
         startTime = Time.time - (initialTime - timeRemaining) / timeScale;
     }
 
-    public void ResetTimer()
-    {
-        IsTimerRunning = true;
-        startTime = Time.time;
-        timeToNextMinute = 60.0f;
-        timeRemaining = initialTime;
-    }
+public void ResetTimer()
+{
+    IsTimerRunning = false;
+    isGameOver = false;
+    timerStarted = false;
+    startTime = Time.time;
+    timeToNextMinute = 60.0f;
+    timeRemaining = initialTime;
+}
 
     // Game
 
@@ -269,6 +274,7 @@ public class GameManager : MonoBehaviour
 
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
         operation.allowSceneActivation = false;
+        nextsceneName = SceneManager.GetSceneByBuildIndex(sceneIndex).name;
 
         // Verifica si es el lobby o la sala antes de iniciar la transición
         if (isRoom)
@@ -285,6 +291,9 @@ public class GameManager : MonoBehaviour
             // Inicia el temporizador después de la transición en la sala
             ResumeTimer();
         }
+
+
+
         else if (isLobby)
         {
             // Espera a que la pantalla esté completamente oscura
@@ -377,12 +386,25 @@ public class GameManager : MonoBehaviour
 
         }
 
+        else if (isFinish)
+        {
+            // Espera a que la pantalla esté completamente oscura
+            while (FadeScreen.instance.rend.material.color.a < 1)
+            {
+                yield return null;
+            }
+
+            
+        }
+
+
         // Espera a que la nueva escena esté casi completamente cargada
         while (operation.progress < 0.9f)
         {
             yield return null;
         }
-        if (timerStarted == false)  // Verifica si no se ha iniciado el temporizador
+
+        if (nextsceneName == "HandLvl1" && timerStarted == false)
         {
             StartTimer();
             Debug.Log("Pantalla oscura. Iniciando temporizador...");
@@ -395,11 +417,11 @@ public class GameManager : MonoBehaviour
         isFadeEncountered = false;
         isMainEncountered = false;
 
-        if (IsTimerRunning == false)
+        /*if (IsTimerRunning == false)
         {
             Debug.Log("Estaba en pausa");
             ResumeTimer();
-        }
+        }*/
 
     }
 
@@ -474,6 +496,11 @@ public class GameManager : MonoBehaviour
     public void SetIsDie(bool value)
     {
         isDie = value;
+    }
+
+    public void SetIsFinish(bool value)
+    {
+        isFinish = value;
     }
 
 }

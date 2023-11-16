@@ -19,6 +19,7 @@ public class SceneSetup : MonoBehaviour
         gameManager.SetIsWin(false);
         gameManager.SetIsGameOver(false);
         gameManager.SetIsDie(false);
+        gameManager.SetIsFinish(false);
 
         // Configurar el valor correspondiente a true según el tipo de escena
         switch (sceneType)
@@ -38,6 +39,9 @@ public class SceneSetup : MonoBehaviour
             case SceneType.Die:
                 gameManager.SetIsDie(true);
                 break;
+            case SceneType.Finish:
+                gameManager.SetIsFinish(true);
+                break;
             // Agrega más casos según sea necesario
 
             default:
@@ -54,5 +58,6 @@ public enum SceneType
     Win,
     GameOver,
     Die,
+    Finish,
     // Agrega más tipos según sea necesario
 }
