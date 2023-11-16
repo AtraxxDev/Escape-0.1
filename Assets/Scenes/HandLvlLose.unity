@@ -441,6 +441,67 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f61ce79dae9222a47b4a2553f48507c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &226422103
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3102180740779305577, guid: e24e65d344dcb2d48ae9c7b0f47b2e15, type: 3}
+      propertyPath: m_Name
+      value: SceneSetup
+      objectReference: {fileID: 0}
+    - target: {fileID: 3102180740779305578, guid: e24e65d344dcb2d48ae9c7b0f47b2e15, type: 3}
+      propertyPath: sceneType
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3102180740779305579, guid: e24e65d344dcb2d48ae9c7b0f47b2e15, type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3102180740779305579, guid: e24e65d344dcb2d48ae9c7b0f47b2e15, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.1380048
+      objectReference: {fileID: 0}
+    - target: {fileID: 3102180740779305579, guid: e24e65d344dcb2d48ae9c7b0f47b2e15, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.43107066
+      objectReference: {fileID: 0}
+    - target: {fileID: 3102180740779305579, guid: e24e65d344dcb2d48ae9c7b0f47b2e15, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.6399086
+      objectReference: {fileID: 0}
+    - target: {fileID: 3102180740779305579, guid: e24e65d344dcb2d48ae9c7b0f47b2e15, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3102180740779305579, guid: e24e65d344dcb2d48ae9c7b0f47b2e15, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3102180740779305579, guid: e24e65d344dcb2d48ae9c7b0f47b2e15, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3102180740779305579, guid: e24e65d344dcb2d48ae9c7b0f47b2e15, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3102180740779305579, guid: e24e65d344dcb2d48ae9c7b0f47b2e15, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3102180740779305579, guid: e24e65d344dcb2d48ae9c7b0f47b2e15, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3102180740779305579, guid: e24e65d344dcb2d48ae9c7b0f47b2e15, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e24e65d344dcb2d48ae9c7b0f47b2e15, type: 3}
 --- !u!1 &257810521
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,6 +672,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TransitionManager
       objectReference: {fileID: 0}
+    - target: {fileID: 710126370544927461, guid: ef613c9d1cbbcd54a844ab90fb7194b6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 710126370544927463, guid: ef613c9d1cbbcd54a844ab90fb7194b6, type: 3}
       propertyPath: isDie
       value: 1
@@ -770,10 +835,8 @@ MonoBehaviour:
   _numberSceneLoad: 7
   LightGreen: {fileID: 1831564990}
   LightRed: {fileID: 1498547060}
-  _sceneTransition: {fileID: 401651732}
   lockSound: {fileID: 1234235511}
   UnlockSound: {fileID: 608115494}
-  on_off: {fileID: 401651734}
 --- !u!1 &432274545
 GameObject:
   m_ObjectHideFlags: 0
@@ -1079,6 +1142,10 @@ PrefabInstance:
     - target: {fileID: 6621816749891834298, guid: 2e8c5be652dbba84eb914c76773be233, type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 6621816749891834298, guid: 2e8c5be652dbba84eb914c76773be233, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6621816749891834299, guid: 2e8c5be652dbba84eb914c76773be233, type: 3}
       propertyPath: _sceneTransitionManager
@@ -1473,6 +1540,10 @@ PrefabInstance:
     - target: {fileID: 3442562879425876746, guid: e89cfe7f7665169488623d5363b47105, type: 3}
       propertyPath: m_Name
       value: TimerManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442562879425876746, guid: e89cfe7f7665169488623d5363b47105, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e89cfe7f7665169488623d5363b47105, type: 3}
@@ -1914,10 +1985,8 @@ MonoBehaviour:
   _numberSceneLoad: 0
   LightGreen: {fileID: 1559118640}
   LightRed: {fileID: 455330660}
-  _sceneTransition: {fileID: 401651732}
   lockSound: {fileID: 1234235511}
   UnlockSound: {fileID: 608115494}
-  on_off: {fileID: 401651734}
 --- !u!1 &895663263
 GameObject:
   m_ObjectHideFlags: 0
@@ -4185,7 +4254,6 @@ MonoBehaviour:
   fadeDuration: 2.5
   fadeColor: {r: 0, g: 0, b: 0, a: 0}
   rend: {fileID: 1134894019}
-  on_off: {fileID: 401651734}
 --- !u!1001 &1048440135116857107
 PrefabInstance:
   m_ObjectHideFlags: 0

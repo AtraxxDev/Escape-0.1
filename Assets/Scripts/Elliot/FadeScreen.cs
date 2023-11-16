@@ -10,6 +10,9 @@ public class FadeScreen : MonoBehaviour
     public float fadeDuration = 3;
     public Color fadeColor;
     public Renderer rend;
+
+
+
     // Start is called before the first frame update
     void Start()
     {

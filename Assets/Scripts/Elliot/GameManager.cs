@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class GameManager : MonoBehaviour
 
     // Variables Scene Transition
     [Header("Scene Transition")]
+    
 
     public bool isLobby;
     public bool isRoom;
@@ -37,19 +39,19 @@ public class GameManager : MonoBehaviour
     [Header("Timer Manager")]
     public float timeScale = 1.0f;
     public AudioClip finishsound;
-
+    private bool timerStarted = false;
     [SerializeField] private float initialTime = 1200.0f;
     public AudioClip minuteSound;
 
     private AudioSource audioSource;
 
-    public bool IsTimerRunning { get; private set; } = true;
+    public bool IsTimerRunning { get; private set; } = false;
 
     [Header("Game")]
     // Variables Game
     private int WinScene = 7;
-    private int GameoverScene = 7;
-    private Inventory _inventory;
+    private int GameoverScene = 6;
+    public Inventory _inventory;
 
     //Variables On and off object
 
@@ -57,6 +59,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject _object;
     [SerializeField] private bool isFadeEncountered = false;
+    [SerializeField] private bool isMainEncountered = false;
 
 
 
@@ -79,7 +82,7 @@ public class GameManager : MonoBehaviour
     // Timer Manager
     private void Start()
     {
-
+       
     }
 
     private void Update()
@@ -95,12 +98,24 @@ public class GameManager : MonoBehaviour
             findObject();
         }
 
+        // Solo realiza la búsqueda si _object es nulo y aún no se ha encontrado la cámara
+        if (FadeScreen.instance == null && !isMainEncountered)
+        {
+            FindAndAssignFadeScreen();
+        }
+
     }
+
 
     private void StartTimer()
     {
-        timeRemaining = initialTime;
-        startTime = Time.time;
+        if (!timerStarted)
+        {
+            timeRemaining = initialTime;
+            startTime = Time.time;
+            timerStarted = true;
+            IsTimerRunning = true;
+        }
     }
     private void UpdateTimer()
     {
@@ -211,6 +226,30 @@ public class GameManager : MonoBehaviour
     }
 
     // Scene Transition 
+
+    private void FindAndAssignFadeScreen()
+    {
+       
+
+        if (FadeScreen.instance == null)
+        {
+            GameObject fadeScreenObject = GameObject.FindGameObjectWithTag("MainCamera");
+
+            FadeScreen.instance = fadeScreenObject.GetComponent<FadeScreen>();
+
+
+            if (FadeScreen.instance != null)
+            {
+                isMainEncountered = true;
+                Debug.Log("Encontre la MainCamera");
+            }
+        }
+        else
+        {
+            Debug.LogError("No se encontró ningún objeto con la etiqueta '" + "MainCamera" + "'.");
+        }
+    }
+
     public void GoToSceneAsync(int sceneIndex)
     {
         ObjectOn();
@@ -220,14 +259,13 @@ public class GameManager : MonoBehaviour
     IEnumerator GoToSceneAsyncRoutine(int sceneIndex)
     {
         Debug.Log("Inicio de la transición de escena");
-        FadeScreen fadeScreen = FadeScreen.instance;
 
         if (soundAmbient != null)
         {
             soundAmbient.Pause();
         }
 
-        fadeScreen.FadeOut();
+        FadeScreen.instance.FadeOut();
 
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneIndex);
         operation.allowSceneActivation = false;
@@ -236,20 +274,21 @@ public class GameManager : MonoBehaviour
         if (isRoom)
         {
             // Espera a que la pantalla esté completamente oscura
-            while (fadeScreen.rend.material.color.a < 1)
+            while (FadeScreen.instance.rend.material.color.a < 1)
             {
                 yield return null;
             }
 
+
             Debug.Log("Pantalla oscura. Iniciando temporizador...");
 
             // Inicia el temporizador después de la transición en la sala
-            TimerManager.instance.ResumeTimer();
+            ResumeTimer();
         }
         else if (isLobby)
         {
             // Espera a que la pantalla esté completamente oscura
-            while (fadeScreen.rend.material.color.a < 1)
+            while (FadeScreen.instance.rend.material.color.a < 1)
             {
                 yield return null;
             }
@@ -281,7 +320,7 @@ public class GameManager : MonoBehaviour
             }*/
 
             // Espera a que la pantalla esté completamente oscura
-            while (fadeScreen.rend.material.color.a < 1)
+            while (FadeScreen.instance.rend.material.color.a < 1)
             {
                 yield return null;
             }
@@ -308,7 +347,7 @@ public class GameManager : MonoBehaviour
                 _monster.SetActive(false);
             }*/
             // Espera a que la pantalla esté completamente oscura
-            while (fadeScreen.rend.material.color.a < 1)
+            while (FadeScreen.instance.rend.material.color.a < 1)
             {
                 yield return null;
             }
@@ -329,12 +368,12 @@ public class GameManager : MonoBehaviour
         else if (isDie)
         {
             // Espera a que la pantalla esté completamente oscura
-            while (fadeScreen.rend.material.color.a < 1)
+            while (FadeScreen.instance.rend.material.color.a < 1)
             {
                 yield return null;
             }
 
-            TimerManager.instance.ResetTimer();
+            ResetTimer();
 
         }
 
@@ -343,16 +382,25 @@ public class GameManager : MonoBehaviour
         {
             yield return null;
         }
+        if (timerStarted == false)  // Verifica si no se ha iniciado el temporizador
+        {
+            StartTimer();
+            Debug.Log("Pantalla oscura. Iniciando temporizador...");
+        }
+
+
 
         // Permite la activación de la nueva escena
         operation.allowSceneActivation = true;
         isFadeEncountered = false;
+        isMainEncountered = false;
 
-        // Inicia el temporizador solo si la escena actual es la que deseas
-        if (SceneManager.GetActiveScene().buildIndex == 0)
+        if (IsTimerRunning == false)
         {
-            StartTimer();
+            Debug.Log("Estaba en pausa");
+            ResumeTimer();
         }
+
     }
 
     // Object on adn Off

@@ -30477,10 +30477,6 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5401638961453627008, guid: 2b2735002be4c214face6c6fd1cec919, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 5401638961453627008, guid: 2b2735002be4c214face6c6fd1cec919, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -30524,20 +30520,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: FaderScreen
       objectReference: {fileID: 0}
-    - target: {fileID: 5401638961453627011, guid: 2b2735002be4c214face6c6fd1cec919, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5401638961453627011, guid: 2b2735002be4c214face6c6fd1cec919, type: 3}
-      propertyPath: m_TagString
-      value: FadeCamera
-      objectReference: {fileID: 0}
-    - target: {fileID: 5401638961453627020, guid: 2b2735002be4c214face6c6fd1cec919, type: 3}
-      propertyPath: fadeDuration
-      value: 3
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5401638961453627020, guid: 2b2735002be4c214face6c6fd1cec919, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b2735002be4c214face6c6fd1cec919, type: 3}
 --- !u!1 &5401638960879101831 stripped
 GameObject:

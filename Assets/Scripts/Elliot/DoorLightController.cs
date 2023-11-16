@@ -13,7 +13,7 @@ public class DoorLightController : MonoBehaviour
    // public Animator _anim;
     public AudioSource lockSound;
     public AudioSource UnlockSound;
-    public OnAndOffObject on_off;
+    
 
     //public DoorLightController otherDoor;
     // Start is called before the first frame update
@@ -79,9 +79,11 @@ public class DoorLightController : MonoBehaviour
         if (LockDoor == false)
         {
             Debug.Log("Me voy a Prender");
-            on_off.ObjectOn();
+            GameManager.instance.ObjectOn();
             Debug.Log("Me Prendi");
-            UnlockSound.Play();           
+            UnlockSound.Play();
+            GameManager.instance.PauseTimer();
+            Debug.Log("Estoy en pausa");
             GameManager.instance.GoToSceneAsync(_numberSceneLoad);
         }
     }

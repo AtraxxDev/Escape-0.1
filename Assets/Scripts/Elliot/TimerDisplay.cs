@@ -23,15 +23,15 @@ public class TimerDisplay : MonoBehaviour
 
     private void UpdateTimer()
     {
-        float timeRemaining = TimerManager.instance.GetTimeRemaining();
-        TimerManager.instance.SetTimeRemaining(timeRemaining);
+        float timeRemaining = GameManager.instance.GetTimeRemaining();
+        GameManager.instance.SetTimeRemaining(timeRemaining);
 
         UpdateUIText();
     }
 
     private void UpdateUIText()
     {
-        float timeRemaining = TimerManager.instance.GetTimeRemaining();
+        float timeRemaining = GameManager.instance.GetTimeRemaining();
 
         int minutes = Mathf.FloorToInt(timeRemaining / 60);
         int seconds = Mathf.FloorToInt(timeRemaining % 60);
