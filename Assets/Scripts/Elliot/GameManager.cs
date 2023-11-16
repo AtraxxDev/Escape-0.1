@@ -62,7 +62,7 @@ public class GameManager : MonoBehaviour
     [Header("Monster")]
     public AudioSource breathingPlayer;
     public AudioSource sreamerSound;
-    public GameObject _Monster;
+    private GameObject _Monster;
     [SerializeField] private bool isMonsterEncountered = false;
 
 
@@ -112,6 +112,7 @@ public class GameManager : MonoBehaviour
         // Solo realiza la búsqueda si _object es nulo y aún no se ha encontrado la cámara
         if (_Monster == null && !isMonsterEncountered)
         {
+            Debug.Log("Buscare al mounstro");
             findMonster();
         }
 
@@ -193,12 +194,11 @@ public class GameManager : MonoBehaviour
         audioSource.PlayOneShot(finishsound);
         yield return new WaitForSeconds(2);
         breathingPlayer.Play();
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(7);
         breathingPlayer.Stop();
-        yield return new WaitForSeconds(3);
         ActivateMonster();
         sreamerSound.Play();
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         GameOver();
     }
 
@@ -439,6 +439,7 @@ public void ResetTimer()
         operation.allowSceneActivation = true;
         isFadeEncountered = false;
         isMainEncountered = false;
+        isMonsterEncountered = false;
 
         /*if (IsTimerRunning == false)
         {
@@ -498,6 +499,7 @@ public void ResetTimer()
     // Monster
     public void findMonster()
     {
+        Debug.Log("Find Monster");
         if (_Monster == null)
         {
             // Encuentra el primer objeto con la etiqueta "MainCamera"
@@ -521,11 +523,13 @@ public void ResetTimer()
     {
         if (_Monster != null)
         {
-            _Monster.SetActive(true);
+            _Monster.gameObject.transform.GetChild(0).gameObject.SetActive(true);
             Debug.Log("Activando el monstruo.");
         }
 
     }
+
+
 
 
     //Scene Status
