@@ -65,7 +65,12 @@ public class NumPadController : MonoBehaviour
                     }
                 }
 
-                KeyCollider.enabled = true;
+                if(KeyCollider != null)
+                {
+                    KeyCollider.enabled = true;
+
+                }
+
 
                 soundTrue.Play(5);
 
