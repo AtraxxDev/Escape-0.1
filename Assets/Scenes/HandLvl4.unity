@@ -1013,6 +1013,7 @@ MonoBehaviour:
   soundError: {fileID: 112574401}
   soundTrue: {fileID: 1771417401}
   CanvasUI1: {fileID: 840734373}
+  KeyCollider: {fileID: 2024409670}
 --- !u!114 &81150133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5874,6 +5875,7 @@ MonoBehaviour:
   soundError: {fileID: 112574401}
   soundTrue: {fileID: 1771417401}
   CanvasUI1: {fileID: 646862437}
+  KeyCollider: {fileID: 0}
 --- !u!114 &646862441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12611,9 +12613,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8486636785834112730, guid: 8d0926fbf660f8b43ad9d7a66053b887, type: 3}
+      propertyPath: m_Size.x
+      value: 8.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 8486636785834112730, guid: 8d0926fbf660f8b43ad9d7a66053b887, type: 3}
+      propertyPath: m_Size.y
+      value: 4.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8486636785834112730, guid: 8d0926fbf660f8b43ad9d7a66053b887, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: fef0c846fd814d445875aa34f82fa16b, type: 3}
+      objectReference: {fileID: 21300000, guid: c37857b50238d1146a5de60db8e2252e, type: 3}
     - target: {fileID: 8486636785834112730, guid: 8d0926fbf660f8b43ad9d7a66053b887, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -16981,6 +16991,11 @@ PrefabInstance:
 --- !u!1 &2024409669 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5094349385843635498, guid: 359874d573ad36745b00d4f54798c6d7, type: 3}
+  m_PrefabInstance: {fileID: 2024409668}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2024409670 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 5364818598583683175, guid: 359874d573ad36745b00d4f54798c6d7, type: 3}
   m_PrefabInstance: {fileID: 2024409668}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2028790163

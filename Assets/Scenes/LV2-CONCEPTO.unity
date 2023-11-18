@@ -6782,6 +6782,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5618543356549279632, guid: 359874d573ad36745b00d4f54798c6d7, type: 3}
   m_PrefabInstance: {fileID: 742884129}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &742884132 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 5364818598583683175, guid: 359874d573ad36745b00d4f54798c6d7, type: 3}
+  m_PrefabInstance: {fileID: 742884129}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &755288294
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8443,6 +8448,7 @@ MonoBehaviour:
   soundError: {fileID: 112574401}
   soundTrue: {fileID: 1771417401}
   CanvasUI1: {fileID: 755429233}
+  KeyCollider: {fileID: 742884132}
 --- !u!1001 &1161143644
 PrefabInstance:
   m_ObjectHideFlags: 0

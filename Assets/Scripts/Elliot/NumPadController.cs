@@ -13,6 +13,7 @@ public class NumPadController : MonoBehaviour
     public AudioSource soundError;
     public AudioSource soundTrue;
     public GameObject CanvasUI1;
+    [SerializeField] private BoxCollider KeyCollider;
     
     
   
@@ -64,7 +65,7 @@ public class NumPadController : MonoBehaviour
                     }
                 }
 
-
+                KeyCollider.enabled = true;
 
                 soundTrue.Play(5);
 

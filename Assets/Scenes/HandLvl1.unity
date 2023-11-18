@@ -12618,7 +12618,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &878845828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33771,6 +33771,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 112574401}
     - target: {fileID: 115574708324533328, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
+      propertyPath: KeyCollider
+      value: 
+      objectReference: {fileID: 5364818597869907576}
+    - target: {fileID: 115574708324533328, guid: cfcb4406f66048e4ca9890107fbcf836, type: 3}
       propertyPath: object_Light
       value: 
       objectReference: {fileID: 1942256419}
@@ -35702,10 +35706,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Key
       objectReference: {fileID: 0}
-    - target: {fileID: 5364818598583683174, guid: 359874d573ad36745b00d4f54798c6d7, type: 3}
-      propertyPath: m_IsKinematic
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5364818598583683192, guid: 359874d573ad36745b00d4f54798c6d7, type: 3}
       propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -35756,6 +35756,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 359874d573ad36745b00d4f54798c6d7, type: 3}
+--- !u!65 &5364818597869907576 stripped
+BoxCollider:
+  m_CorrespondingSourceObject: {fileID: 5364818598583683175, guid: 359874d573ad36745b00d4f54798c6d7, type: 3}
+  m_PrefabInstance: {fileID: 5364818597869907575}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5401638960879101830
 PrefabInstance:
   m_ObjectHideFlags: 0
