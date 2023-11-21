@@ -4,10 +4,10 @@ using UnityEngine;
 public class TurnOnOffLever: MonoBehaviour
 {
     public List<Light> lightList;
-    private bool _light1=false;
+    private bool _light0=false;
+    private bool _light1 = false;
     private bool _light2 = false;
     private bool _light3 = false;
-    private bool _light4 = false;
     private bool _activate1 = true;
     private bool _activate2 = true;
     private bool _activate3 = true;
@@ -61,10 +61,10 @@ public class TurnOnOffLever: MonoBehaviour
     public void ActivateBox()
     {
 
-        if (_light1 == true && _light2 == true && _light3 == true && _light4 == true && !ispuzzleResult)
+        if (_light0 == true && _light1 == true && _light2 == true && _light3 == true && !ispuzzleResult)
         {
-
-                _soundTrue.Play();
+            lightList[4].enabled = true;
+            _soundTrue.Play();
                 _soundCompleteLevel.Play();
             KeyCollider.enabled = true;
 
@@ -105,9 +105,9 @@ public class TurnOnOffLever: MonoBehaviour
                 _activate1 = false;
                 //Activa la luz y el booleano de la luz correspondiente
                 lightList[1].enabled = true;
-                _light2 = true;
+                _light1 = true;
                 lightList[3].enabled = false;
-                _light4 = true;
+                _light3 = false;
                 if (_lever1 != null)
                 {
                     Animator animator = _lever1.GetComponent<Animator>();
@@ -122,9 +122,9 @@ public class TurnOnOffLever: MonoBehaviour
             {
                 _activate1 = true;
                 lightList[1].enabled = false;
-                _light2 = false;
+                _light1 = false;
                 lightList[3].enabled = true;
-                _light4 = false;
+                _light3 = true;
                 if (_lever1 != null)
                 {
                     Animator animator = _lever1.GetComponent<Animator>();
@@ -155,9 +155,9 @@ public class TurnOnOffLever: MonoBehaviour
             {
                 _activate2 = false;
                 lightList[2].enabled = true;
-                _light3 = true;
+                _light2 = true;
                 lightList[1].enabled = false;
-                _light2 = false;
+                _light1= false;
                 if (_lever2 != null)
                 {
                     Animator animator = _lever2.GetComponent<Animator>();
@@ -172,9 +172,9 @@ public class TurnOnOffLever: MonoBehaviour
             {
                 _activate2 = true;
                 lightList[2].enabled = false;
-                _light3 = false;
+                _light2 = false;
                 lightList[1].enabled = true;
-                _light2 = true;
+                _light1 = true;
                 if (_lever2 != null)
                 {
                     Animator animator = _lever2.GetComponent<Animator>();
@@ -206,9 +206,9 @@ public class TurnOnOffLever: MonoBehaviour
             {
                 _activate3 = false;
                 lightList[3].enabled = true;
-                _light4 = true;
+                _light3 = true;
                 lightList[2].enabled = false;
-                _light3 = false;
+                _light2 = false;
                 if (_lever3 != null)
                 {
                     Animator animator = _lever3.GetComponent<Animator>();
@@ -223,9 +223,9 @@ public class TurnOnOffLever: MonoBehaviour
             {
                 _activate3 = true;
                 lightList[3].enabled = false;
-                _light4 = false;
+                _light3 = false;
                 lightList[2].enabled = true;
-                _light3 = true;
+                _light2 = true;
                 if (_lever3 != null)
                 {
                     Animator animator = _lever3.GetComponent<Animator>();
@@ -256,9 +256,9 @@ public class TurnOnOffLever: MonoBehaviour
             {
                 _activate4 = false;
                 lightList[0].enabled = true;
-                _light1 = true;
+                _light0 = true;
                 lightList[2].enabled = false;
-                _light3 = false;
+                _light2 = false;
                 if (_lever4 != null)
                 {
                     Animator animator = _lever4.GetComponent<Animator>();
@@ -273,9 +273,9 @@ public class TurnOnOffLever: MonoBehaviour
             {
                 _activate4 = true;
                 lightList[0].enabled = false;
-                _light1 = false;
+                _light0 = false;
                 lightList[2].enabled = true;
-                _light3 = true;
+                _light2 = true;
                 if (_lever4 != null)
                 {
                     Animator animator = _lever4.GetComponent<Animator>();
