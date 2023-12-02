@@ -18,7 +18,7 @@ public class ButtonHandler : MonoBehaviour
         // Llama a la función WinGame del GameManager directamente usando la instancia
         if (GameManager.instance != null)
         {
-            GameManager.instance.GoToSceneAsync(0);
+            GameManager.instance.GoToSceneAsync(1);
         }
     }
 }

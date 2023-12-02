@@ -2219,7 +2219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LockDoor: 0
-  _numberSceneLoad: 0
+  _numberSceneLoad: 1
   LightGreen: {fileID: 1559118640}
   LightRed: {fileID: 455330660}
   lockSound: {fileID: 1234235511}

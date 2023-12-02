@@ -15,6 +15,6 @@ public class FinishScene : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
 
-        GameManager.instance.GoToSceneAsync(5);
+        GameManager.instance.GoToSceneAsync(0);
     }
 }

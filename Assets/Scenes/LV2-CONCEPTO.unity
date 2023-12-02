@@ -683,7 +683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LockDoor: 1
-  _numberSceneLoad: 4
+  _numberSceneLoad: 5
   LightGreen: {fileID: 1365664400}
   LightRed: {fileID: 707988649}
   lockSound: {fileID: 1234235511}

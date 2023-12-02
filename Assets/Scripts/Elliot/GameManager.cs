@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
     [Header("Game")]
     // Variables Game
     private int WinScene = 7;
-    private int GameoverScene = 7;
+    private int GameoverScene = 6;
     public Inventory _inventory;
 
     //Variables On and off object

@@ -14158,7 +14158,7 @@ PrefabInstance:
       objectReference: {fileID: 8136179196207609506}
     - target: {fileID: 6621816749891834299, guid: 2e8c5be652dbba84eb914c76773be233, type: 3}
       propertyPath: initialTime
-      value: 600
+      value: 1200
       objectReference: {fileID: 0}
     - target: {fileID: 6621816749891834299, guid: 2e8c5be652dbba84eb914c76773be233, type: 3}
       propertyPath: soundAmbient
