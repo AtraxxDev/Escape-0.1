@@ -106,8 +106,8 @@ public class TurnOnOffLever: MonoBehaviour
                 //Activa la luz y el booleano de la luz correspondiente
                 lightList[1].enabled = true;
                 _light1 = true;
-                lightList[3].enabled = false;
-                _light3 = false;
+                lightList[3].enabled = true;
+                _light3 = true;
                 if (_lever1 != null)
                 {
                     Animator animator = _lever1.GetComponent<Animator>();
@@ -123,8 +123,8 @@ public class TurnOnOffLever: MonoBehaviour
                 _activate1 = true;
                 lightList[1].enabled = false;
                 _light1 = false;
-                lightList[3].enabled = true;
-                _light3 = true;
+                lightList[3].enabled = false;
+                _light3 = false;
                 if (_lever1 != null)
                 {
                     Animator animator = _lever1.GetComponent<Animator>();
